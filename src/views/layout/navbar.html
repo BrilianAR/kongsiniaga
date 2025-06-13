@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with Dropdown</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Konfigurasi untuk memadankan warna butang
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-teal': '#0f766e',
+                        'custom-teal-dark': '#134e4a',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+
+    <nav class="bg-white shadow-sm relative" x-data="{ open: false }">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                
+                <div>
+                    <a href="#">
+                        <img class="h-10" src="./assets/images/logo.png" alt="Kongsi Niaga Logo">
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-6">
+                    <div class="flex items-center space-x-6  align-center mx-auto text-base text-gray-700">
+                        <a href="#" class="hover:text-custom-teal-dark">Home</a>
+                        <a href="#" class="hover:text-custom-teal-dark">Product</a>
+                        <a href="#" class="hover:text-custom-teal-dark">Plan</a>
+                        <a href="#" class="hover:text-custom-teal-dark">Contact</a>
+                    </div>
+                    
+                    <div class="relative">
+                        <button id="language-toggle" class="flex items-center text-gray-700 hover:text-custom-teal-dark">
+                            <span>Malay</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div id="language-menu" class="hidden absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-xl z-20">
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Malay</a>
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">English</a>
+                        </div>
+                    </div>
+                    
+                    <div class="h-6 border-l border-gray-300"></div>
+
+                   <div class="flex items-center space-x-3">
+                      <a href="#" class="
+                          px-5 py-2 text-sm font-medium text-custom-teal-dark border border-custom-teal-dark rounded-lg 
+                          hover:bg-custom-teal-dark hover:text-white
+                          hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out ">
+                          Sign In
+                      </a>
+                      <a href="#" class="
+                          px-5 py-2 text-sm font-medium text-white bg-custom-teal-dark rounded-lg 
+                          hover:bg-custom-teal-dark/90 
+                          hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out ">
+                          Let's Start
+                      </a>
+                  </div>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Home</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Product</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Plan</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Contact</a>
+                
+                <div class="border-t border-gray-200 my-2"></div>
+                
+                <p class="px-3 pt-2 text-xs font-semibold text-gray-400 uppercase">Language</p>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Malay</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">English</a>
+                
+                <div class="border-t border-gray-200 my-2"></div>
+
+                <div class="flex items-center px-3 py-2 space-x-3">
+                    <a href="#" class="w-full text-center px-5 py-2 text-sm font-medium text-custom-teal-dark border border-custom-teal-dark rounded-lg hover:bg-custom-teal-dark hover:text-white
+                          hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out">
+                        Sign In
+                    </a>
+                    <a href="#" class="w-full text-center px-5 py-2 text-sm font-medium text-white bg-custom-teal-dark rounded-lg hover:bg-custom-teal-dark/90 
+                          hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out">
+                        Let's Start
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<script>
+    // --- Skrip untuk fungsi Dropdown Bahasa dan Menu Mudah Alih ---
+
+    // Dapatkan elemen dari DOM
+    const langToggle = document.getElementById('language-toggle');
+    const langMenu = document.getElementById('language-menu');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // 1. Logik untuk Dropdown Bahasa
+    langToggle.addEventListener('click', (event) => {
+        // Hentikan event dari merebak ke window, supaya klik pada butang tidak terus menutup menu
+        event.stopPropagation(); 
+        langMenu.classList.toggle('hidden');
+    });
+
+    // Tutup dropdown jika pengguna klik di luar kawasan menu
+    window.addEventListener('click', () => {
+        if (!langMenu.classList.contains('hidden')) {
+            langMenu.classList.add('hidden');
+        }
+    });
+
+    // 2. Logik untuk Menu Mudah Alih
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+</script>
+
+</body>
+</html>
