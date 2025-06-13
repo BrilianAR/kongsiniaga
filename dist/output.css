@@ -1430,6 +1430,11 @@ video {
     padding-bottom: 11rem;
   }
 
+  .md\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
   .md\:pl-8 {
     padding-left: 2rem;
   }
