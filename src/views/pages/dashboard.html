@@ -25,6 +25,20 @@
         }
     </script>
     <style>
+    /* Menambahkan style untuk transisi yang lebih mulus pada main content */
+    #mainContentWrapper { /* Sebaiknya targetkan ID wrapper agar lebih konsisten */
+        transition: margin-left 0.3s ease-in-out;
+    }
+    /* CSS untuk menyembunyikan scrollbar pada elemen */
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none; /* Untuk Chrome, Safari, dan Opera */
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;  /* Untuk IE dan Edge */
+        scrollbar-width: none;  /* Untuk Firefox */
+    }
+    </style>
+    <style>
         /* Menambahkan style untuk transisi yang lebih mulus pada main content */
         #mainContent {
             transition: margin-left 0.3s ease-in-out;
@@ -59,7 +73,7 @@
                 </a> -->
             </div>
 
-            <div class="flex-grow overflow-y-auto">
+            <div class="flex-grow overflow-y-auto scrollbar-hide">
                 <div class="p-4">
                     <div>
                         <a href="#loggedinMenu" data-menu-toggle class="flex items-center justify-between w-full">
@@ -658,9 +672,7 @@
 
             if (menu) {
                 menu.classList.toggle('hidden');
-                if (icon) {
-                    icon.classList.toggle('rotate-180');
-                }
+
             }
         });
     });

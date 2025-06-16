@@ -25,6 +25,20 @@
         }
     </script>
     <style>
+    /* Menambahkan style untuk transisi yang lebih mulus pada main content */
+    #mainContentWrapper { /* Sebaiknya targetkan ID wrapper agar lebih konsisten */
+        transition: margin-left 0.3s ease-in-out;
+    }
+    /* CSS untuk menyembunyikan scrollbar pada elemen */
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none; /* Untuk Chrome, Safari, dan Opera */
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;  /* Untuk IE dan Edge */
+        scrollbar-width: none;  /* Untuk Firefox */
+    }
+    </style>
+    <style>
         /* Menambahkan style untuk transisi yang lebih mulus pada main content */
         #mainContent {
             transition: margin-left 0.3s ease-in-out;
@@ -38,20 +52,28 @@
         <aside id="sidebar" class="fixed top-0 left-0 z-40 h-screen w-64 bg-custom-teal-dark text-white flex flex-col transition-transform duration-300 ease-in-out">
         
             <div class="flex items-center justify-between p-4 border-b border-white/20">
-                <a href="./dashboard.html" class="flex items-center gap-2 font-semibold tracking-wider">
+                <a href="#" class="flex items-center gap-2 font-semibold tracking-wider">
                     <img src="../../../assets/images/logo.png" alt="Logo" class="h-8 w-auto">
                 </a>
 
+                <!-- <button id="closeSidebarBtn" class="hidden lg:block p-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button> -->
+
                 <button id="closeSidebarBtn" class="hidden lg:block p-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                </button>
+                    </button>
 
-                <a href="#" class="lg:hidden">
+                <a href="#" id="closeSidebarMobileBtn" class="lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    </a>
+
+                <!-- <a href="./dashboard.html" class="lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                </a>
+                </a> -->
             </div>
 
-            <div class="flex-grow overflow-y-auto">
+            <div class="flex-grow overflow-y-auto scrollbar-hide">
                 <div class="p-4">
                     <div>
                         <a href="#loggedinMenu" data-menu-toggle class="flex items-center justify-between w-full">
@@ -353,82 +375,106 @@
             </main>
     </div>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
+    // --- Referensi Elemen DOM ---
     const sidebar = document.getElementById('sidebar');
-    const openSidebarBtn = document.getElementById('openSidebarBtn');
-    const closeSidebarBtn = document.getElementById('closeSidebarBtn');
     const mainContent = document.querySelector('main');
-    const menuToggles = document.querySelectorAll('[data-menu-toggle]');
+    const universalToggleBtn = document.getElementById('openSidebarBtn');
+    const closeSidebarBtn = document.getElementById('closeSidebarBtn'); // Tambahkan referensi
+    const closeSidebarMobileBtn = document.getElementById('closeSidebarMobileBtn');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
 
-    // Fungsi untuk menyembunyikan sidebar
-    const hideSidebar = () => {
-        if (sidebar) {
-            sidebar.classList.add('-translate-x-full');
-        }
-        if (mainContent) {
-            mainContent.classList.remove('ml-64');
+    // Pastikan semua elemen penting ditemukan
+    if (!sidebar || !mainContent || !universalToggleBtn || !closeSidebarBtn) {
+        console.error("Elemen penting (sidebar, main, openSidebarBtn, atau closeSidebarBtn) tidak ditemukan. Periksa ID di HTML Anda.");
+        return;
+    }
+
+    const MD_BREAKPOINT = 768;
+
+    // --- Definisi Fungsi ---
+    const toggleDesktopSidebar = () => {
+        console.log("Mencoba toggle sidebar desktop...");
+
+        // Mengecek status SAAT INI
+        const isCurrentlyCollapsed = sidebar.style.transform === 'translateX(-100%)';
+        console.log("Apakah saat ini tertutup? ", isCurrentlyCollapsed);
+
+        if (isCurrentlyCollapsed) {
+            console.log("Status: Tertutup. AKSI: MEMBUKA.");
+            // Buka sidebar
+            sidebar.style.transform = 'translateX(0)';
+            mainContent.classList.add('md:ml-64');
+        } else {
+            console.log("Status: Terbuka. AKSI: MENUTUP.");
+            // Tutup sidebar
+            sidebar.style.transform = 'translateX(-100%)';
+            mainContent.classList.remove('md:ml-64');
         }
     };
 
-    // Fungsi untuk menampilkan sidebar
-    const showSidebar = () => {
-        if (sidebar) {
-            sidebar.classList.remove('-translate-x-full');
-        }
-        if (mainContent) {
-            mainContent.classList.add('ml-64');
-        }
+    const openMobileSidebar = () => {
+        sidebar.style.transform = 'translateX(0)';
+        if (sidebarOverlay) sidebarOverlay.classList.remove('hidden');
     };
 
-    if (openSidebarBtn) {
-        openSidebarBtn.addEventListener('click', (e) => {
+    const closeMobileSidebar = () => {
+        sidebar.style.transform = 'translateX(-100%)';
+        if (sidebarOverlay) sidebarOverlay.classList.add('hidden');
+    };
+
+    // --- Event Listeners ---
+    universalToggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (window.innerWidth < MD_BREAKPOINT) {
+            openMobileSidebar();
+        } else {
+            toggleDesktopSidebar();
+        }
+    });
+
+    // Tambahkan event listener untuk closeSidebarBtn
+    closeSidebarBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (window.innerWidth >= MD_BREAKPOINT) {
+            toggleDesktopSidebar();
+        }
+    });
+
+    if (closeSidebarMobileBtn) {
+        closeSidebarMobileBtn.addEventListener('click', (e) => {
+            e.preventDefault();
             e.stopPropagation();
-            showSidebar();
+            closeMobileSidebar();
         });
     }
 
-    if (closeSidebarBtn) {
-        closeSidebarBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            hideSidebar();
-        });
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', closeMobileSidebar);
     }
 
-    // Dropdown toggle (telah diubah)
-    menuToggles.forEach(toggle => {
+    // --- Inisialisasi Saat Halaman Dimuat ---
+    if (window.innerWidth >= MD_BREAKPOINT) {
+        sidebar.style.transform = 'translateX(0)'; // Desktop: Terbuka
+        mainContent.classList.add('md:ml-64');
+    } else {
+        sidebar.style.transform = 'translateX(-100%)'; // Mobile: Tertutup
+        mainContent.classList.remove('md:ml-64');
+    }
+    
+    // Dropdown menu (tidak berubah)
+    document.querySelectorAll('[data-menu-toggle]').forEach(toggle => {
         toggle.addEventListener('click', (e) => {
             e.preventDefault();
             const menuId = toggle.getAttribute('href').substring(1);
             const menu = document.getElementById(menuId);
-            // const icon = toggle.querySelector('svg'); // Variabel icon tidak lagi diperlukan untuk rotasi
+            const icon = toggle.querySelector('svg:last-of-type');
 
             if (menu) {
-                // Hanya fungsi untuk menampilkan/menyembunyikan menu yang dijalankan
                 menu.classList.toggle('hidden');
-                
-                // BARIS DI BAWAH INI TELAH DIHAPUS
-                // icon.classList.toggle('rotate-180'); 
             }
         });
     });
-
-    // Logika awal saat halaman dimuat
-    if (window.innerWidth >= 1024) {
-        showSidebar();
-    } else {
-        hideSidebar();
-    }
-    const amountInput = document.getElementById('amount');
-    const amountDisplayInput = document.getElementById('amount_display');
-
-    // Pastikan kedua elemen ada di halaman sebelum menambahkan listener
-    if (amountInput && amountDisplayInput) {
-        // Tambahkan 'event listener' pada input pertama
-        amountInput.addEventListener('input', function() {
-            // Atur nilai input kedua agar sama dengan nilai input pertama
-            amountDisplayInput.value = this.value;
-        });
-    }
 });
 </script>
 
