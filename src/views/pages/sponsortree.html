@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Commissions</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -250,7 +250,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./myreferralcommisions.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./myreferralcommisions.html" class="block p-2 text-sm rounded-md bg-custom-teal">
                                         Referrals Commissions
                                     </a>
                                 </li>
@@ -265,7 +265,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./newregiatration.html" class="block p-2 text-sm rounded-md bg-custom-teal">
+                                    <a href="./newregiatration.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         New Registration
                                     </a>
                                 </li>
@@ -291,79 +291,184 @@
                 </button>
                 
                 <img src="../../../assets/images/logo.png" alt="Logo" class="ml-4 h-10 w-auto">
+
             </header>
 
-            <main class="p-4 sm:p-6 lg:p-8">
-                <div class="mb-8">
-                    <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Register</h1>
-                    <p class="text-sm text-gray-500 mt-1">Home - Register</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <form action="#" method="POST">
-                        <div class="mb-6">
-                            <label for="reference_by" class="block text-sm font-medium text-gray-700">Reference By</label>
-                            <input type="text" id="reference_by" name="reference_by" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="admin">
-                        </div>
+            <main class="flex-1 p-6 main-content">
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="username" class="block text-sm font-medium text-gray-700">Username*</label>
-                                <input type="text" name="username" id="username" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="Username">
-                            </div>
+            <header class="mb-6">
 
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700">E-mail Adress*</label>
-                                <input type="email" name="email" id="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="Email Adress">
-                            </div>
+                <h2 class="text-2xl font-semibold text-gray-800">My Sponsor Tree</h2>
 
-                            <div>
-                                <label for="country" class="block text-sm font-medium text-gray-700">Country</label>
-                                <select id="country" name="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-custom-teal focus:border-custom-teal sm:text-sm">
-                                    <option>Indonesian</option>
-                                    <option>Malaysian</option>
-                                </select>
-                            </div>
-                            
-                            <div>
-                                <label for="mobile_phone" class="block text-sm font-medium text-gray-700">Mobile Phone</label>
-                                <div class="mt-1 flex rounded-md shadow-sm">
-                                    <span id="country-code" class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">+62</span>
-                                    <input type="tel" name="mobile_phone" id="mobile_phone" class="flex-1 block w-full rounded-none rounded-r-md border-gray-300 py-2 px-3 focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="Your Phone Number">
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <label for="password" class="block text-sm font-medium text-gray-700">Password*</label>
-                                <input type="password" name="password" id="password" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="Enter Password">
-                            </div>
+                <p class="text-sm text-gray-500">Home - My Sponsor Tree</p>
 
-                            <div>
-                                <label for="confirm_password" class="block text-sm font-medium text-gray-700">Confirm Password*</label>
-                                <input type="password" name="confirm_password" id="confirm_password" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="Confirm Password">
-                            </div>
-                        </div>
-                        
-                        <div class="mt-6 flex items-start">
-                            <div class="flex items-center h-5">
-                                <input id="agree" name="agree" type="checkbox" class="focus:ring-custom-teal h-4 w-4 text-custom-teal border-gray-300 rounded">
-                            </div>
-                            <div class="ml-3 text-sm">
-                                <label for="agree" class="font-medium text-gray-700">I agree with <a href="#" class="text-custom-pink hover:underline">Privacy Policy</a> . <a href="#" class="text-custom-pink hover:underline">Terms of Service</a></label>
-                            </div>
-                        </div>
+            </header>
 
-                        <div class="mt-2 text-center text-sm text-gray-600">
-                        Already Have an Account? <a href="#" class="font-medium text-custom-pink hover:underline">Sign In</a>
-                        </div>
-                        
-                        <div class="mt-6">
-                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-custom-teal-dark hover:bg-custom-teal focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-teal">
-                                Create Account
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </main>
+
+
+            <div class="tree-container text-white p-5 rounded-lg font-mono text-sm">
+
+                <ul>
+
+                    <li>
+
+                        <i class="fas fa-chevron-down mr-2"></i>
+
+                        <span>admin Kongsi Niaga ( admin ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                        <ul class="ml-6 mt-1 space-y-1">
+
+                            <li>
+
+                                <i class="fas fa-chevron-down mr-2"></i>
+
+                                <span>kongsiniaga1 ( kongsiniaga1 ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                                <ul class="ml-6 mt-1 space-y-1">
+
+                                     <li>
+
+                                        <i class="fas fa-chevron-right mr-2 text-gray-400"></i>
+
+                                        <span>Rohaizad Raof ( rizad0 ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fas fa-chevron-right mr-2 text-gray-400"></i>
+
+                                <span>Rohaizad Abdul Raof ( rizad02 ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                            </li>
+
+                             <li>
+
+                                <i class="fas fa-chevron-right mr-2 text-gray-400"></i>
+
+                                <span>Alfyan Saputra ( alfyan20 ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                            </li>
+
+                             <li>
+
+                                <i class="fas fa-chevron-right mr-2 text-gray-400"></i>
+
+                                <span>Hazem Shannak ( hazem1 ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                            </li>
+
+                            <li>
+
+                                <span>Muhammad Suffian Hilmen Bin Rohaizad ( sbhq ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                            </li>
+
+                            <li>
+
+                                <span>Sofiah Serena ( serena90 ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                            </li>
+
+                            <li>
+
+                                <span>Rosli Udin ( rosli ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                            </li>
+
+                            <li>
+
+                                <span>Rosli Udin ( botcha )</span>
+
+                            </li>
+
+                             <li>
+
+                                <span>Jana Jana ( janna ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fas fa-chevron-right mr-2 text-gray-400"></i>
+
+                                <span>Norliza fajudin ( datoliza ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fas fa-chevron-right mr-2 text-gray-400"></i>
+
+                                <span>Roslan Hj Awang Din ( tokian ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                            </li>
+
+                             <li>
+
+                                <i class="fas fa-chevron-right mr-2 text-gray-400"></i>
+
+                                <span>Joeberry Gani ( joeberry ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                            </li>
+
+                             <li>
+
+                                <i class="fas fa-chevron-right mr-2 text-gray-400"></i>
+
+                                <span>Hairul Azman masdar ( habim ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                            </li>
+
+                            <li>
+
+                                <span>Admin1 HQ ( admin1 ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                            </li>
+
+                            <li>
+
+                                <span>admin2 HQ ( admin ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                            </li>
+
+                             <li>
+
+                                <span>Amir1 HQ ( amirr ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                            </li>
+
+                            <li>
+
+                                <span>kongsiniaga HQ ( kongsiniaga ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                            </li>
+
+                             <li>
+
+                                <span>Kongsi2 HQ ( kongsi ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                            </li>
+
+                             <li>
+
+                                <span>adminkongsi HQ ( adminkongsi ) - </span><span class="text-yellow-400">SEED YOGU VENTURE</span>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </main>
 
     </div>
 <script>
@@ -431,27 +536,6 @@ document.addEventListener('DOMContentLoaded', function () {
         showSidebar();
     } else {
         hideSidebar();
-    }
-    // Cari elemen dropdown negara dan elemen span untuk kode negara
-    const countrySelect = document.getElementById('country');
-    const countryCodeSpan = document.getElementById('country-code');
-
-    // Pastikan kedua elemen ditemukan sebelum menambahkan 'event listener'
-    if (countrySelect && countryCodeSpan) {
-        
-        // Tambahkan 'event listener' yang akan aktif setiap kali pilihan negara diubah
-        countrySelect.addEventListener('change', function() {
-            // Ambil nilai (value) dari pilihan yang sekarang
-            const selectedCountry = this.value;
-
-            // Terapkan logika untuk mengubah kode negara
-            if (selectedCountry === 'Malaysian') {
-                countryCodeSpan.textContent = '+60';
-            } else {
-                // Defaultnya adalah Indonesia atau pilihan lainnya
-                countryCodeSpan.textContent = '+62';
-            }
-        });
     }
 });
 </script>
