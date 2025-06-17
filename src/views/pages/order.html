@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EWallet 2 EShop</title>
+    <title>Order</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -25,20 +25,6 @@
         }
     </script>
     <style>
-    /* Menambahkan style untuk transisi yang lebih mulus pada main content */
-    #mainContentWrapper { /* Sebaiknya targetkan ID wrapper agar lebih konsisten */
-        transition: margin-left 0.3s ease-in-out;
-    }
-    /* CSS untuk menyembunyikan scrollbar pada elemen */
-    .scrollbar-hide::-webkit-scrollbar {
-        display: none; /* Untuk Chrome, Safari, dan Opera */
-    }
-    .scrollbar-hide {
-        -ms-overflow-style: none;  /* Untuk IE dan Edge */
-        scrollbar-width: none;  /* Untuk Firefox */
-    }
-    </style>
-    <style>
         /* Menambahkan style untuk transisi yang lebih mulus pada main content */
         #mainContent {
             transition: margin-left 0.3s ease-in-out;
@@ -52,35 +38,27 @@
         <aside id="sidebar" class="fixed top-0 left-0 z-40 h-screen w-64 bg-custom-teal-dark text-white flex flex-col transition-transform duration-300 ease-in-out">
         
             <div class="flex items-center justify-between p-4 border-b border-white/20">
-                <a href="#" class="flex items-center gap-2 font-semibold tracking-wider">
+                <a href="./dashboard.html" class="flex items-center gap-2 font-semibold tracking-wider">
                     <img src="../../../assets/images/logo.png" alt="Logo" class="h-8 w-auto">
                 </a>
 
-                <!-- <button id="closeSidebarBtn" class="hidden lg:block p-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                </button> -->
-
                 <button id="closeSidebarBtn" class="hidden lg:block p-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                    </button>
+                </button>
 
-                <a href="#" id="closeSidebarMobileBtn" class="lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                    </a>
-
-                <!-- <a href="./dashboard.html" class="lg:hidden">
+                <a href="#" class="lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                </a> -->
+                </a>
             </div>
 
-            <div class="flex-grow overflow-y-auto scrollbar-hide">
+            <div class="flex-grow overflow-y-auto">
                 <div class="p-4">
                     <div>
                         <a href="#loggedinMenu" data-menu-toggle class="flex items-center justify-between w-full">
                             <h6 class="font-semibold text-white">ADMIN GANTENG</h6>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </a>
-                        <div class="hidden mt-3" id="loggedinMenu">
+                        <div class=" mt-3" id="loggedinMenu">
                             <ul class="space-y-1">
                                 <li>
                                     <a href="./profile.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
@@ -88,7 +66,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./order.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./order.html" class="block p-2 text-sm rounded-md bg-custom-teal">
                                         Orders
                                     </a>
                                 </li>
@@ -223,7 +201,7 @@
                                 </div>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                             </a>
-                            <ul id="transactionsMenu" class=" mt-2 ml-5 space-y-1">
+                            <ul id="transactionsMenu" class="hidden mt-2 ml-5 space-y-1">
                                 <li>
                                     <a href="./ewallet.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         EWallet
@@ -235,12 +213,12 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./ewallettransfer.html" class="block p-2 text-sm rounded-md hoverbg-custom-teal">
+                                    <a href="./ewallettransfer.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         EWallet Transfer
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./walletconversion.html" class="block p-2 text-sm rounded-md bg-custom-teal">
+                                    <a href="./walletconversion.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Wallet Conversion
                                     </a>
                                 </li>
@@ -282,7 +260,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./seedshare.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Seed Share
                                     </a>
                                 </li>
@@ -313,173 +291,112 @@
                 </button>
                 
                 <img src="../../../assets/images/logo.png" alt="Logo" class="ml-4 h-10 w-auto">
-
             </header>
-
-        <main class="p-6 lg:p-8">
-                <div class="mb-8">
-                    <h1 class="text-3xl font-bold text-gray-800">EWallet 2 EShop</h1>
-                    <p class="text-sm text-gray-500 mt-1">Home - EWallet 2 Eshop</p>
+            <main class="p-6">
+                <div class="mb-6">
+                    <h1 class="md:text-3xl text-2xl font-bold text-gray-800">Orders</h1>
+                    <p class="text-sm text-gray-500">Home - Orders</p>
                 </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                        <div class="border border-gray-200 rounded-lg">
-                            <div class="bg-custom-teal-dark text-white font-semibold p-3 rounded-t-lg">
-                                EWallet
-                            </div>
-                            <div class="p-3 text-right text-xl font-bold text-gray-800">
-                                RM5,567
-                            </div>
-                        </div>
-                        <div class="border border-gray-200 rounded-lg">
-                             <div class="bg-custom-teal-dark text-white font-semibold p-3 rounded-t-lg">
-                                EShopping
-                            </div>
-                            <div class="p-3 text-right text-xl font-bold text-gray-800">
-                                RM5,567
-                            </div>
-                        </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="bg-gray-50 border-b border-gray-200">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 font-medium">Product</th>
+                                    <th scope="col" class="px-6 py-3 font-medium">Quantity</th>
+                                    <th scope="col" class="px-6 py-3 font-medium">Price</th>
+                                    <th scope="col" class="px-6 py-3 font-medium">Total Price</th>
+                                    <th scope="col" class="px-6 py-3 font-medium">Address</th>
+                                    <th scope="col" class="px-6 py-3 font-medium">Status</th>
+                                    <th scope="col" class="px-6 py-3 font-medium">Tracking No</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-white">
+                                    <td class="px-6 py-4">MORINGANO</td>
+                                    <td class="px-6 py-4">2</td>
+                                    <td class="px-6 py-4">49.90 MYR</td>
+                                    <td class="px-6 py-4">98.80 MYR</td>
+                                    <td class="px-6 py-4">SELF</td>
+                                    <td class="px-6 py-4">
+                                        <span class="px-2.5 py-1 text-xs font-semibold text-yellow-800 bg-yellow-100 rounded-full">
+                                            PENDING
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4"></td>
+                                </tr>
+                                </tbody>
+                        </table>
                     </div>
-
-                    <form action="#" method="POST" class="space-y-6">
-                        <div>
-                            <label for="amount" class="block text-sm font-medium text-gray-700">
-                                Amount (Charge: 0.00 MYR + 0.00 %)
-                                <span class="text-red-500">*</span>
-                            </label>
-                            <input type="text" name="amount" id="amount" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="Enter Amount">
-                            <p class="mt-2 text-xs text-gray-500">Amount Will Cut From Your Account</p>
-                        </div>
-
-                        <div>
-                            <div class="mt-1 relative rounded-md shadow-sm">
-                                <input type="text" name="amount_display" id="amount_display" class="block w-full pl-3 pr-12 sm:text-sm border-gray-300 rounded-md focus:ring-custom-teal focus:border-custom-teal py-2" placeholder="0.00">
-                                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                                    <span class="text-gray-500 sm:text-sm">MYR</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="password" class="block text-sm font-medium text-gray-700">
-                                Your Password
-                                <span class="text-red-500">*</span>
-                            </label>
-                            <input type="password" name="password" id="password" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-custom-teal focus:border-custom-teal sm:text-sm">
-                        </div>
-                        
-                        <div class="pt-4">
-                            <button type="submit" class="w-full flex justify-center py-2.5 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-custom-teal-dark hover:bg-custom-teal focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-teal">
-                                Transfer Balance
-                            </button>
-                        </div>
-                    </form>
                 </div>
             </main>
     </div>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    // --- Referensi Elemen DOM ---
+document.addEventListener('DOMContentLoaded', function () {
     const sidebar = document.getElementById('sidebar');
+    const openSidebarBtn = document.getElementById('openSidebarBtn');
+    const closeSidebarBtn = document.getElementById('closeSidebarBtn');
     const mainContent = document.querySelector('main');
-    const universalToggleBtn = document.getElementById('openSidebarBtn');
-    const closeSidebarBtn = document.getElementById('closeSidebarBtn'); // Tambahkan referensi
-    const closeSidebarMobileBtn = document.getElementById('closeSidebarMobileBtn');
-    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const menuToggles = document.querySelectorAll('[data-menu-toggle]');
 
-    // Pastikan semua elemen penting ditemukan
-    if (!sidebar || !mainContent || !universalToggleBtn || !closeSidebarBtn) {
-        console.error("Elemen penting (sidebar, main, openSidebarBtn, atau closeSidebarBtn) tidak ditemukan. Periksa ID di HTML Anda.");
-        return;
-    }
-
-    const MD_BREAKPOINT = 768;
-
-    // --- Definisi Fungsi ---
-    const toggleDesktopSidebar = () => {
-        console.log("Mencoba toggle sidebar desktop...");
-
-        // Mengecek status SAAT INI
-        const isCurrentlyCollapsed = sidebar.style.transform === 'translateX(-100%)';
-        console.log("Apakah saat ini tertutup? ", isCurrentlyCollapsed);
-
-        if (isCurrentlyCollapsed) {
-            console.log("Status: Tertutup. AKSI: MEMBUKA.");
-            // Buka sidebar
-            sidebar.style.transform = 'translateX(0)';
-            mainContent.classList.add('md:ml-64');
-        } else {
-            console.log("Status: Terbuka. AKSI: MENUTUP.");
-            // Tutup sidebar
-            sidebar.style.transform = 'translateX(-100%)';
-            mainContent.classList.remove('md:ml-64');
+    // Fungsi untuk menyembunyikan sidebar
+    const hideSidebar = () => {
+        if (sidebar) {
+            sidebar.classList.add('-translate-x-full');
+        }
+        if (mainContent) {
+            mainContent.classList.remove('ml-64');
         }
     };
 
-    const openMobileSidebar = () => {
-        sidebar.style.transform = 'translateX(0)';
-        if (sidebarOverlay) sidebarOverlay.classList.remove('hidden');
+    // Fungsi untuk menampilkan sidebar
+    const showSidebar = () => {
+        if (sidebar) {
+            sidebar.classList.remove('-translate-x-full');
+        }
+        if (mainContent) {
+            mainContent.classList.add('ml-64');
+        }
     };
 
-    const closeMobileSidebar = () => {
-        sidebar.style.transform = 'translateX(-100%)';
-        if (sidebarOverlay) sidebarOverlay.classList.add('hidden');
-    };
-
-    // --- Event Listeners ---
-    universalToggleBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (window.innerWidth < MD_BREAKPOINT) {
-            openMobileSidebar();
-        } else {
-            toggleDesktopSidebar();
-        }
-    });
-
-    // Tambahkan event listener untuk closeSidebarBtn
-    closeSidebarBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (window.innerWidth >= MD_BREAKPOINT) {
-            toggleDesktopSidebar();
-        }
-    });
-
-    if (closeSidebarMobileBtn) {
-        closeSidebarMobileBtn.addEventListener('click', (e) => {
-            e.preventDefault();
+    if (openSidebarBtn) {
+        openSidebarBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            closeMobileSidebar();
+            showSidebar();
         });
     }
 
-    if (sidebarOverlay) {
-        sidebarOverlay.addEventListener('click', closeMobileSidebar);
+    if (closeSidebarBtn) {
+        closeSidebarBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            hideSidebar();
+        });
     }
 
-    // --- Inisialisasi Saat Halaman Dimuat ---
-    if (window.innerWidth >= MD_BREAKPOINT) {
-        sidebar.style.transform = 'translateX(0)'; // Desktop: Terbuka
-        mainContent.classList.add('md:ml-64');
-    } else {
-        sidebar.style.transform = 'translateX(-100%)'; // Mobile: Tertutup
-        mainContent.classList.remove('md:ml-64');
-    }
-    
-    // Dropdown menu (tidak berubah)
-    document.querySelectorAll('[data-menu-toggle]').forEach(toggle => {
+    // Dropdown toggle (telah diubah)
+    menuToggles.forEach(toggle => {
         toggle.addEventListener('click', (e) => {
             e.preventDefault();
             const menuId = toggle.getAttribute('href').substring(1);
             const menu = document.getElementById(menuId);
-            const icon = toggle.querySelector('svg:last-of-type');
+            // const icon = toggle.querySelector('svg'); // Variabel icon tidak lagi diperlukan untuk rotasi
 
             if (menu) {
+                // Hanya fungsi untuk menampilkan/menyembunyikan menu yang dijalankan
                 menu.classList.toggle('hidden');
+                
+                // BARIS DI BAWAH INI TELAH DIHAPUS
+                // icon.classList.toggle('rotate-180'); 
             }
         });
     });
+
+    // Logika awal saat halaman dimuat
+    if (window.innerWidth >= 1024) {
+        showSidebar();
+    } else {
+        hideSidebar();
+    }
 });
 </script>
 

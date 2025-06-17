@@ -83,27 +83,27 @@
                         <div class="hidden mt-3" id="loggedinMenu">
                             <ul class="space-y-1">
                                 <li>
-                                    <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./profile.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Profile Setting
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./order.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Orders
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./changepassword.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Change Password
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./supportticket.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Support Ticket
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./2fa.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         2FA Security
                                     </a>
                                 </li>
@@ -204,7 +204,7 @@
                         </li>
 
                         <li>
-                            <a href="#" class="flex items-center gap-3 p-2 rounded-md hover:bg-custom-teal">
+                            <a href="./planadmin.html" class="flex items-center gap-3 p-2 rounded-md hover:bg-custom-teal">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
                                 </svg>
@@ -262,12 +262,12 @@
 
                             <ul id="referralsMenu" class=" mt-2 ml-5 space-y-1">
                                 <li>
-                                    <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./sponsortree.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Sponsor Tree
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./unileveltree.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Unilevel Tree
                                     </a>
                                 </li>
@@ -329,12 +329,18 @@
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label for="username" class="block text-sm font-medium text-gray-700">Username*</label>
+                                <label for="username" class="block text-sm font-medium text-gray-700">
+                                    Username
+                                    <span class="text-red-500">*</span>
+                                </label>
                                 <input type="text" name="username" id="username" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="Username">
                             </div>
 
                             <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700">E-mail Adress*</label>
+                                <label for="email" class="block text-sm font-medium text-gray-700">
+                                    E-mail Adress
+                                    <span class="text-red-500">*</span>
+                                </label>
                                 <input type="email" name="email" id="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="Email Adress">
                             </div>
 
@@ -355,12 +361,18 @@
                             </div>
                             
                             <div>
-                                <label for="password" class="block text-sm font-medium text-gray-700">Password*</label>
+                                <label for="password" class="block text-sm font-medium text-gray-700">
+                                    Password
+                                    <span class="text-red-500">*</span>
+                                </label>
                                 <input type="password" name="password" id="password" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="Enter Password">
                             </div>
 
                             <div>
-                                <label for="confirm_password" class="block text-sm font-medium text-gray-700">Confirm Password*</label>
+                                <label for="confirm_password" class="block text-sm font-medium text-gray-700">
+                                    Confirm Password
+                                    <span class="text-red-500">*</span>
+                                </label>
                                 <input type="password" name="confirm_password" id="confirm_password" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="Confirm Password">
                             </div>
                         </div>

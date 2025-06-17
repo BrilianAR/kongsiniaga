@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EWallet 2 EShop</title>
+    <title>Unilevel Tree</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -17,7 +17,7 @@
                     colors: {
                         'custom-teal-dark': '#063a49',
                         'custom-teal': '#1a4e69',
-                        'custom-pink': '#ac1eb9',
+                        'custom-blue': '#0866ff',
                         'custom-blue-light': '#6bbaec' // Warna dari contoh sidebar kedua
                     }
                 }
@@ -37,12 +37,6 @@
         -ms-overflow-style: none;  /* Untuk IE dan Edge */
         scrollbar-width: none;  /* Untuk Firefox */
     }
-    </style>
-    <style>
-        /* Menambahkan style untuk transisi yang lebih mulus pada main content */
-        #mainContent {
-            transition: margin-left 0.3s ease-in-out;
-        }
     </style>
 </head>
 <body class="font-sans">
@@ -144,6 +138,7 @@
                             <ul id="topupMenu" class="hidden mt-2 ml-5 space-y-1">
                                 <li>
                                     <a href="./topupwallet.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+
                                         TopUp Wallet
                                     </a>
                                 </li>
@@ -223,7 +218,7 @@
                                 </div>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                             </a>
-                            <ul id="transactionsMenu" class=" mt-2 ml-5 space-y-1">
+                            <ul id="transactionsMenu" class="hidden mt-2 ml-5 space-y-1">
                                 <li>
                                     <a href="./ewallet.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         EWallet
@@ -235,12 +230,12 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./ewallettransfer.html" class="block p-2 text-sm rounded-md hoverbg-custom-teal">
+                                    <a href="./ewallettransfer.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         EWallet Transfer
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./walletconversion.html" class="block p-2 text-sm rounded-md bg-custom-teal">
+                                    <a href="./walletconversion.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Wallet Conversion
                                     </a>
                                 </li>
@@ -260,14 +255,14 @@
                                 </svg>
                             </a>
 
-                            <ul id="referralsMenu" class="hidden mt-2 ml-5 space-y-1">
+                            <ul id="referralsMenu" class="mt-2 ml-5 space-y-1">
                                 <li>
                                     <a href="./sponsortree.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Sponsor Tree
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./unileveltree.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./unileveltree.html" class="block p-2 text-sm rounded-md bg-custom-teal">
                                         Unilevel Tree
                                     </a>
                                 </li>
@@ -298,10 +293,12 @@
                                 </li>
                             </ul>
                         </li>
+                        
                     </ul>
                 </nav>
             </div>
         </aside>
+        <div id="sidebarOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden lg:hidden"></div>
         <div id="mainContentWrapper" class="flex-1">
             <header class="sticky top-0 bg-white shadow-md z-30 p-3 flex items-center">
                 <button id="openSidebarBtn" class="p-2 rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-800">
@@ -316,136 +313,116 @@
 
             </header>
 
-        <main class="p-6 lg:p-8">
-                <div class="mb-8">
-                    <h1 class="text-3xl font-bold text-gray-800">EWallet 2 EShop</h1>
-                    <p class="text-sm text-gray-500 mt-1">Home - EWallet 2 Eshop</p>
+            <main class="p-6">
+                <div class="mb-6">
+                    <h1 class="text-2xl font-bold text-gray-800">My Unilevel Tree</h1>
+                    <p class="text-sm text-gray-500 mt-1">Home - My Unilevel Tree</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                        <div class="border border-gray-200 rounded-lg">
-                            <div class="bg-custom-teal-dark text-white font-semibold p-3 rounded-t-lg">
-                                EWallet
-                            </div>
-                            <div class="p-3 text-right text-xl font-bold text-gray-800">
-                                RM5,567
-                            </div>
-                        </div>
-                        <div class="border border-gray-200 rounded-lg">
-                             <div class="bg-custom-teal-dark text-white font-semibold p-3 rounded-t-lg">
-                                EShopping
-                            </div>
-                            <div class="p-3 text-right text-xl font-bold text-gray-800">
-                                RM5,567
-                            </div>
-                        </div>
-                    </div>
+                <div class="mb-6 flex space-x-2">
+                    <button class="px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-md shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                        Normal Tree
+                    </button>
+                    <button class="px-4 py-2 text-sm font-semibold text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                        Horizontal Tree
+                    </button>
+                </div>
 
-                    <form action="#" method="POST" class="space-y-6">
-                        <div>
-                            <label for="amount" class="block text-sm font-medium text-gray-700">
-                                Amount (Charge: 0.00 MYR + 0.00 %)
-                                <span class="text-red-500">*</span>
-                            </label>
-                            <input type="text" name="amount" id="amount" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="Enter Amount">
-                            <p class="mt-2 text-xs text-gray-500">Amount Will Cut From Your Account</p>
-                        </div>
-
-                        <div>
-                            <div class="mt-1 relative rounded-md shadow-sm">
-                                <input type="text" name="amount_display" id="amount_display" class="block w-full pl-3 pr-12 sm:text-sm border-gray-300 rounded-md focus:ring-custom-teal focus:border-custom-teal py-2" placeholder="0.00">
-                                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                                    <span class="text-gray-500 sm:text-sm">MYR</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="password" class="block text-sm font-medium text-gray-700">
-                                Your Password
-                                <span class="text-red-500">*</span>
-                            </label>
-                            <input type="password" name="password" id="password" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-custom-teal focus:border-custom-teal sm:text-sm">
-                        </div>
-                        
-                        <div class="pt-4">
-                            <button type="submit" class="w-full flex justify-center py-2.5 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-custom-teal-dark hover:bg-custom-teal focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-teal">
-                                Transfer Balance
-                            </button>
-                        </div>
-                    </form>
+                <div class="bg-custom-teal-dark tree text-white p-5 rounded-lg font-mono text-sm overflow-x-auto">
+                    <ul>
+                        <li>
+                            <i class="fas fa-chevron-down cursor-pointer"></i>
+                            <span>admin Kongsi Niaga ( admin ) - Seed Yogu Venture</span>
+                            <ul>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>Kongsi1 Niaga ( kongsiniaga1 )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>Rohaizad Raof ( rizadd )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>Norliza Tajudin ( datoliza )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>Roslan Hj Awang Din ( toklan )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>Joeherry Gani ( joeherry )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>Hairul Azman masdar ( habim )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>Admin1 HQ ( admin1.1 )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>admin2 HQ ( ammin )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>Amir1 HQ ( amir )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>kongsiniaga HQ ( kongsiniaga )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>Kongsi2 HQ ( kongsi )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>Adminkongsi HQ ( adminkongsi )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>Adminniaga HQ ( adminniaga )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>Admin2 HQ ( admini2 )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>Admin3 HQ ( admini3 )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>Admin4 HQ ( admini4 )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>admin5 HQ ( admini5 )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>kongsi1 HQ ( kongsi1 )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>kongsi3 HQ ( kongsi3 )</span></li>
+                                <li><i class="fas fa-chevron-right text-gray-400"></i><span>Kongsi3 HQ ( kongsi4 )</span></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </main>
+
     </div>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     // --- Referensi Elemen DOM ---
     const sidebar = document.getElementById('sidebar');
     const mainContent = document.querySelector('main');
     const universalToggleBtn = document.getElementById('openSidebarBtn');
-    const closeSidebarBtn = document.getElementById('closeSidebarBtn'); // Tambahkan referensi
     const closeSidebarMobileBtn = document.getElementById('closeSidebarMobileBtn');
     const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const menuToggles = document.querySelectorAll('[data-menu-toggle]');
 
-    // Pastikan semua elemen penting ditemukan
-    if (!sidebar || !mainContent || !universalToggleBtn || !closeSidebarBtn) {
-        console.error("Elemen penting (sidebar, main, openSidebarBtn, atau closeSidebarBtn) tidak ditemukan. Periksa ID di HTML Anda.");
-        return;
-    }
-
-    const MD_BREAKPOINT = 768;
+    const MD_BREAKPOINT = 768; // Breakpoint untuk medium screen (Tailwind's md)
 
     // --- Definisi Fungsi ---
+
+    // Fungsi KHUSUS untuk BUKA/TUTUP sidebar di DESKTOP
     const toggleDesktopSidebar = () => {
-        console.log("Mencoba toggle sidebar desktop...");
+        if (!sidebar || !mainContent) return;
 
-        // Mengecek status SAAT INI
-        const isCurrentlyCollapsed = sidebar.style.transform === 'translateX(-100%)';
-        console.log("Apakah saat ini tertutup? ", isCurrentlyCollapsed);
+        // Cek apakah sidebar sedang tertutup
+        const isCollapsed = sidebar.classList.contains('-translate-x-full');
 
-        if (isCurrentlyCollapsed) {
-            console.log("Status: Tertutup. AKSI: MEMBUKA.");
-            // Buka sidebar
-            sidebar.style.transform = 'translateX(0)';
-            mainContent.classList.add('md:ml-64');
+        if (isCollapsed) {
+            // Jika tertutup -> BUKA
+            sidebar.classList.remove('-translate-x-full');
+            mainContent.classList.add('ml-64');
         } else {
-            console.log("Status: Terbuka. AKSI: MENUTUP.");
-            // Tutup sidebar
-            sidebar.style.transform = 'translateX(-100%)';
-            mainContent.classList.remove('md:ml-64');
+            // Jika terbuka -> TUTUP
+            sidebar.classList.add('-translate-x-full');
+            mainContent.classList.remove('ml-64');
         }
     };
 
+    // Fungsi KHUSUS untuk BUKA sidebar di MOBILE
     const openMobileSidebar = () => {
-        sidebar.style.transform = 'translateX(0)';
-        if (sidebarOverlay) sidebarOverlay.classList.remove('hidden');
+        if (!sidebar || !sidebarOverlay) return;
+        sidebar.classList.remove('-translate-x-full');
+        sidebarOverlay.classList.remove('hidden');
     };
 
+    // Fungsi KHUSUS untuk TUTUP sidebar di MOBILE
     const closeMobileSidebar = () => {
-        sidebar.style.transform = 'translateX(-100%)';
-        if (sidebarOverlay) sidebarOverlay.classList.add('hidden');
+        if (!sidebar || !sidebarOverlay) return;
+        sidebar.classList.add('-translate-x-full');
+        sidebarOverlay.classList.add('hidden');
     };
 
-    // --- Event Listeners ---
-    universalToggleBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (window.innerWidth < MD_BREAKPOINT) {
-            openMobileSidebar();
-        } else {
-            toggleDesktopSidebar();
-        }
-    });
+    // --- Pemasangan Event Listener ---
 
-    // Tambahkan event listener untuk closeSidebarBtn
-    closeSidebarBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (window.innerWidth >= MD_BREAKPOINT) {
-            toggleDesktopSidebar();
-        }
-    });
+    // Tombol hamburger universal di header
+    if (universalToggleBtn) {
+        universalToggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            // Cek lebar layar SAAT tombol diklik
+            if (window.innerWidth < MD_BREAKPOINT) {
+                openMobileSidebar(); // Di mobile, tombol ini hanya untuk membuka
+            } else {
+                toggleDesktopSidebar(); // Di desktop, tombol ini untuk buka/tutup
+            }
+        });
+    }
 
+    // Tombol 'X' di sidebar (hanya berfungsi di mobile)
     if (closeSidebarMobileBtn) {
         closeSidebarMobileBtn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -454,21 +431,22 @@
         });
     }
 
+    // Overlay (hanya berfungsi di mobile)
     if (sidebarOverlay) {
         sidebarOverlay.addEventListener('click', closeMobileSidebar);
     }
 
     // --- Inisialisasi Saat Halaman Dimuat ---
     if (window.innerWidth >= MD_BREAKPOINT) {
-        sidebar.style.transform = 'translateX(0)'; // Desktop: Terbuka
+        sidebar.classList.remove('-translate-x-full');
         mainContent.classList.add('md:ml-64');
     } else {
-        sidebar.style.transform = 'translateX(-100%)'; // Mobile: Tertutup
+        sidebar.classList.add('-translate-x-full');
         mainContent.classList.remove('md:ml-64');
     }
-    
-    // Dropdown menu (tidak berubah)
-    document.querySelectorAll('[data-menu-toggle]').forEach(toggle => {
+
+    // --- Logika Dropdown Menu (Tidak Berubah) ---
+    menuToggles.forEach(toggle => {
         toggle.addEventListener('click', (e) => {
             e.preventDefault();
             const menuId = toggle.getAttribute('href').substring(1);
@@ -477,6 +455,9 @@
 
             if (menu) {
                 menu.classList.toggle('hidden');
+                if (icon) {
+                    icon.classList.toggle('rotate-180');
+                }
             }
         });
     });
