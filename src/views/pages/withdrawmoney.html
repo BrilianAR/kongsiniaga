@@ -61,17 +61,17 @@
                         <div class="hidden mt-3" id="loggedinMenu">
                             <ul class="space-y-1">
                                 <li>
-                                    <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./profile.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Profile Setting
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./order.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Orders
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./changepassword.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Change Password
                                     </a>
                                 </li>
@@ -240,12 +240,12 @@
 
                             <ul id="referralsMenu" class="hidden mt-2 ml-5 space-y-1">
                                 <li>
-                                    <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./sponsortree.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Sponsor Tree
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./unileveltree.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Unilevel Tree
                                     </a>
                                 </li>
@@ -304,7 +304,10 @@
                     <form action="./withdrawpreview.html" method="POST">
                         <div class="space-y-6">
                             <div>
-                                <label for="gateway" class="block text-sm font-medium text-gray-700">Methods*</label>
+                                <label for="gateway" class="block text-sm font-medium text-gray-700">
+                                    Methods
+                                    <span class="text-red-500">*</span>
+                                </label>
                                 <select id="gateway" name="gateway" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-custom-teal focus:border-custom-teal sm:text-sm rounded-md">
                                     <option selected disabled>Select Gateway</option>
                                     <option>Bank</option>
@@ -312,7 +315,10 @@
                             </div>
 
                             <div>
-                                <label for="account_no" class="block text-sm font-medium text-gray-700">Amount*</label>
+                                <label for="account_no" class="block text-sm font-medium text-gray-700">
+                                    Amount
+                                    <span class="text-red-500">*</span>
+                                </label>
 
                                 <div class="mt-1 relative rounded-md shadow-sm">
                                     

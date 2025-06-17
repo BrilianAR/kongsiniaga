@@ -61,17 +61,17 @@
                         <div class="hidden mt-3" id="loggedinMenu">
                             <ul class="space-y-1">
                                 <li>
-                                    <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./profile.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Profile Setting
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./order.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Orders
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./changepassword.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Change Password
                                     </a>
                                 </li>
@@ -240,12 +240,12 @@
 
                             <ul id="referralsMenu" class="hidden mt-2 ml-5 space-y-1">
                                 <li>
-                                    <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./sponsortree.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Sponsor Tree
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./unileveltree.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Unilevel Tree
                                     </a>
                                 </li>
@@ -323,13 +323,16 @@
 
                     <form action="#" method="POST" class="space-y-6">
                         <div>
-                            <label for="amount" class="block text-sm font-medium text-gray-700">Amount (Charge: 0.00 MYR + 0.00 %)*</label>
+                            <label for="amount" class="block text-sm font-medium text-gray-700">
+                                Amount (Charge: 0.00 MYR + 0.00 %)
+                                <span class="text-red-500">*</span>
+                            </label>
                             <input type="text" name="amount" id="amount" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="Enter Amount">
                             <p class="mt-2 text-xs text-gray-500">Amount Will Cut From Your Account</p>
                         </div>
 
                         <div>
-                             <div class="mt-1 relative rounded-md shadow-sm">
+                            <div class="mt-1 relative rounded-md shadow-sm">
                                 <input type="text" name="amount_display" id="amount_display" class="block w-full pl-3 pr-12 sm:text-sm border-gray-300 rounded-md focus:ring-custom-teal focus:border-custom-teal py-2" placeholder="0.00">
                                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                                     <span class="text-gray-500 sm:text-sm">MYR</span>
@@ -337,9 +340,11 @@
                             </div>
                         </div>
 
-
                         <div>
-                            <label for="password" class="block text-sm font-medium text-gray-700">Your Password*</label>
+                            <label for="password" class="block text-sm font-medium text-gray-700">
+                                Your Password
+                                <span class="text-red-500">*</span>
+                            </label>
                             <input type="password" name="password" id="password" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-custom-teal focus:border-custom-teal sm:text-sm">
                         </div>
                         
