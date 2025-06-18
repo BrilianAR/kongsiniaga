@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Finnger</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom colors for Tailwind CSS */
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+        .custom-gradient-bg {
+            background: linear-gradient(to right, #0866ff, #6bbaec); /* Example gradient, adjust as needed */
+        }
+    </style>
+    <script>
+        // Extend Tailwind CSS configuration with custom colors
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-teal-dark': '#063a49',
+                        'custom-teal': '#1a4e69',
+                        'custom-blue': '#0866ff',
+                        'custom-blue-light': '#6bbaec'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'], // Example font, adjust if needed
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="flex bg-white rounded-3xl shadow-xl overflow-hidden max-w-6xl w-full mx-4 my-8">
+        <div class="w-1/2 p-16 flex flex-col justify-center">
+            <div class="mb-10">
+                <img src="../../../../assets/images/logo.png" alt=" Logo" class="inline-block align-middle mr-2 w-auto h-10">
+            </div>
+            <h1 class="text-5xl font-bold text-custom-teal-dark mb-4 leading-tight">Holla, <br>Welcome Back</h1>
+            <p class="text-gray-500 text-lg mb-8">Hey, welcome back to your special place</p>
+
+            <form>
+                <div class="mb-6">
+                    <label for="email" class="sr-only">Email address</label>
+                    <input type="email" id="email" class="w-full px-6 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-custom-blue" placeholder="stanley@gmail.com" value="stanley@gmail.com">
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="sr-only">Password</label>
+                    <input type="password" id="password" class="w-full px-6 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-custom-blue" placeholder="••••••••••" value="••••••••••">
+                </div>
+
+                <div class="flex justify-between items-center mb-10">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="rememberMe" class="h-5 w-5 text-custom-blue rounded border-gray-300 focus:ring-custom-blue">
+                        <label for="rememberMe" class="ml-2 text-gray-600">Remember me</label>
+                    </div>
+                    <a href="./forgotpass.html" class="text-custom-blue hover:underline">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="w-full bg-custom-blue text-white py-4 rounded-xl text-xl font-semibold hover:bg-custom-teal transition duration-300">Sign In</button>
+            </form>
+        </div>
+
+        <div class="w-1/2 custom-gradient-bg flex items-center justify-center relative rounded-r-3xl">
+            <img src="../../../../assets/images/ilustrasi-login.png" alt="OTP Illustration" class="w-full h-full object-cover">
+            </div>
+    </div>
+
+</body>
+</html>
