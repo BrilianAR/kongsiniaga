@@ -6,7 +6,6 @@
     <title>Forgot Password</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <script>
@@ -21,7 +20,7 @@
                         'custom-blue-light': '#6bbaec'
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'], // Example font, adjust if needed
+                        sans: ['Inter', 'sans-serif'],
                     }
                 }
             }
@@ -29,18 +28,19 @@
     </script>
     <style>
         .custom-gradient-bg {
-            background: linear-gradient(to right, #0866ff, #6bbaec); /* Example gradient, adjust as needed */
+            background: linear-gradient(to right, #0866ff, #6bbaec);
         }
     </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
 
-    <div class="flex bg-white rounded-3xl shadow-xl overflow-hidden max-w-6xl w-full mx-4 my-8">
-        <div class="w-1/2 p-16 flex flex-col justify-center">
+    <div class="flex flex-col lg:flex-row bg-white rounded-3xl shadow-xl overflow-hidden max-w-6xl w-full">
+        
+        <div class="w-full lg:w-1/2 p-8 md:p-16 flex flex-col justify-center">
             <div class="mb-10">
-                <img src="../../../../assets/images/logo.png" alt="Logo" class="inline-block align-middle mr-2 w-auto h-12">
+                <img src="../../../../assets/images/logo.png" alt="Logo" class="inline-block align-middle mr-2 w-auto h-10">
             </div>
-            <h1 class="text-5xl font-bold text-custom-teal-dark mb-4 leading-tight">Forgot Your <br>Password?</h1>
+            <h1 class="text-3xl md:text-5xl font-bold text-custom-teal-dark mb-4 leading-tight">Forgot Your <br>Password?</h1>
             <p class="text-gray-500 text-lg mb-8">Enter your email and we'll send you a link to reset your password.</p>
 
             <form>
@@ -53,11 +53,11 @@
             </form>
 
             <div class="mt-8 text-center text-gray-500">
-                Remember your password? <a href="./login.html" class="text-custom-blue hover:underline">Sign In</a>
+                Remember your password? <a href="./login.html" class="text-custom-blue hover:underline">Login</a>
             </div>
         </div>
 
-        <div class="w-1/2 custom-gradient-bg flex items-center justify-center relative rounded-r-3xl">
+        <div class="hidden lg:flex w-1/2 custom-gradient-bg items-center justify-center relative rounded-r-3xl">
             <img src="../../../../assets/images/ilustrasi-login.png" alt="Illustration" class="w-full h-full object-cover">
         </div>
     </div>
