@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - KongsiNiaga</title>
+    <title>Log Masuk - KongsiNiaga</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         // Konfigurasi untuk memadankan warna butang dan tema
         tailwind.config = {
             theme: {
                 extend: {
-                    // Menambahkan palet warna kustom
+                    // Menambah palet warna tersuai
                     colors: {
                         'custom-teal-dark': '#063a49',
                         'custom-teal': '#1a4e69',
@@ -81,17 +81,18 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
                                 </svg>
                             </div>
-                            <h6 class="text-teal-200 text-lg font-medium mb-2 tracking-wide">Welcome Back</h6>
+                            <h6 class="text-teal-200 text-lg font-medium mb-2 tracking-wide">Selamat Kembali</h6>
                             <h2 class="text-white text-4xl lg:text-5xl font-bold leading-tight">
-                                Login to Your
+                                Masuk ke
                                 <span class="text-custom-blue">
-                                    Account
+                                    Akaun
                                 </span>
+                                Anda
                             </h2>
                         </div>
                         
                         <p class="text-teal-100/90 text-lg max-w-md mx-auto leading-relaxed">
-                            Access your dashboard and continue your journey with us
+                            Akses papan pemuka anda dan teruskan perjalanan anda bersama kami.
                         </p>
                         
                         <div class="mt-12 flex justify-center space-x-4">
@@ -105,14 +106,14 @@
                 <div class="p-12 flex flex-col justify-center bg-white/5 backdrop-blur-sm">
                     <div class="text-center mb-8 animate-fade-in">
                         <div class="inline-flex items-center space-x-3 mb-6">
-                            <img src="./assets/images/logo.png" alt="logo" class="w-auto h-12">
+                            <img src="../../../../assets/images/logo.png" alt="logo" class="w-auto h-12">
                         </div>
                     </div>
 
                     <form class="space-y-6 animate-slide-up" style="animation-delay: 0.2s;">
                         <div class="group">
                             <label for="username" class="block text-white text-sm font-medium mb-2 group-focus-within:text-blue-300 transition-colors">
-                                Username or Email *
+                                Nama Pengguna atau E-mel *
                             </label>
                             <div class="relative">
                                 <input 
@@ -121,7 +122,7 @@
                                     name="username" 
                                     required
                                     class="w-full px-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-custom-blue focus:border-transparent transition-all duration-300 hover:bg-white/15"
-                                    placeholder="Enter your username or email"
+                                    placeholder="Masukkan nama pengguna atau e-mel anda"
                                 >
                                 <div class="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400/0 via-custom-blue/0 to-blue-400/0 group-focus-within:from-custom-blue/20 group-focus-within:via-custom-blue/20 group-focus-within:to-custom-blue/20 transition-all duration-500 pointer-events-none"></div>
                             </div>
@@ -129,7 +130,7 @@
 
                         <div class="group">
                             <label for="password" class="block text-white text-sm font-medium mb-2 group-focus-within:text-blue-300 transition-colors">
-                                Password *
+                                Kata Laluan *
                             </label>
                             <div class="relative">
                                 <input 
@@ -138,7 +139,7 @@
                                     name="password" 
                                     required
                                     class="w-full px-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-custom-blue focus:border-transparent transition-all duration-300 hover:bg-white/15"
-                                    placeholder="Enter your password"
+                                    placeholder="Masukkan kata laluan anda"
                                 >
                                 <button type="button" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/60 hover:text-white transition-colors" onclick="togglePassword()">
                                     <svg id="eye-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -154,24 +155,24 @@
                             type="submit" 
                             class="w-full py-4 bg-custom-blue text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-transparent relative overflow-hidden group"
                         >
-                            <span class="relative z-10">Login</span>
+                            <span class="relative z-10">Masuk</span>
                             <div class="absolute inset-0 bg-blue-700/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </button>
 
                         <div class="flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0 text-sm">
                             <p class="text-white/80">
-                                Don't have an account? 
-                                <a href="./register.html" class="text-blue-300 hover:text-blue-200 font-medium transition-colors">Register</a>
+                                Belum mempunyai akaun? 
+                                <a href="./register.html" class="text-blue-300 hover:text-blue-200 font-medium transition-colors">Daftar</a>
                             </p>
                             <a href="#" class="text-blue-300 hover:text-blue-200 font-medium transition-colors">
-                                Forgot Password?
+                                Lupa Kata Laluan?
                             </a>
                         </div>
                     </form>
 
                     <div class="mt-12 text-center animate-fade-in" style="animation-delay: 0.4s;">
                         <p class="text-white/60 text-sm">
-                            © All Rights Reserved By 
+                            © Hak Cipta Terpelihara oleh 
                             <a href="./index.html" class="text-blue-300 hover:text-blue-200 transition-colors">KongsiNiaga</a>
                         </p>
                     </div>
@@ -199,7 +200,7 @@
             }
         }
 
-        // Add form interaction effects
+        // Tambah kesan interaksi borang
         document.addEventListener('DOMContentLoaded', function() {
             const inputs = document.querySelectorAll('input');
             
@@ -212,7 +213,7 @@
                     this.parentElement.classList.remove('focused');
                 });
                 
-                // Add typing effect
+                // Tambah kesan menaip
                 input.addEventListener('input', function() {
                     if (this.value) {
                         this.classList.add('has-value');
@@ -239,7 +240,7 @@
             background: rgba(255, 255, 255, 0.15) !important;
         }
         
-        /* Custom scrollbar */
+        /* Bar skrol tersuai */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -249,15 +250,15 @@
             border-radius: 4px;
         }
         
-        /* Menggunakan warna blue untuk scrollbar thumb */
+        /* Menggunakan warna biru untuk 'thumb' bar skrol */
         ::-webkit-scrollbar-thumb {
-            background: #ac1eb9; /* custom-blue */
+            background: #0866ff; /* custom-blue */
             opacity: 0.6;
             border-radius: 4px;
         }
         
         ::-webkit-scrollbar-thumb:hover {
-            background: #ac1eb9; /* custom-blue */
+            background: #0866ff; /* custom-blue */
             opacity: 1;
         }
     </style>

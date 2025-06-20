@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kongsi Niaga - B2B Platform</title>
+    <title>Kongsi Niaga - Platform B2B</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         // Konfigurasi untuk memadankan warna butang dan tema
@@ -13,15 +13,14 @@
                     colors: {
                         'custom-teal-dark': '#063a49',
                         'custom-teal': '#1a4e69',
-                        'blue-fb': '#ac1eb9', // Warna untuk butang di hero section
-                        'blue-fb':'#0866ff',
+                        'blue-fb': '#0866ff', // Warna utama yang digunakan
                     }
                 }
             }
         }
     </script>
      <style>
-        /* CSS untuk menyembunyikan scrollbar pada kontainer produk */
+        /* CSS untuk menyembunyikan bar skrol pada bekas produk */
         .scrollbar-hide {
             -ms-overflow-style: none; /* IE dan Edge */
             scrollbar-width: none; /* Firefox */
@@ -40,28 +39,28 @@
                     
                     <div>
                         <a href="#">
-                            <img class="h-10" src="./assets/images/logo.png" alt="Kongsi Niaga Logo">
+                            <img class="h-10" src="../../../../assets/images/logo.png" alt="Logo Kongsi Niaga">
                         </a>
                     </div>
 
                     <div class="hidden md:flex items-center space-x-6">
                         <div class="flex items-center space-x-6 align-center mx-auto text-base text-gray-700">
-                            <a href="./index.html" class="hover:text-custom-teal-dark">Home</a>
-                            <a href="./src/views/pages/product.html" class="hover:text-custom-teal-dark">Product</a>
-                            <a href="./src/views/pages/plan.html" class="hover:text-custom-teal-dark">Plan</a>
-                            <a href="./src/views/pages/contact.html" class="hover:text-custom-teal-dark">Contact</a>
+                            <a href="./index.html" class="hover:text-custom-teal-dark">Laman Utama</a>
+                            <a href="./product.html" class="hover:text-custom-teal-dark">Produk</a>
+                            <a href="./plan.html" class="hover:text-custom-teal-dark">Pelan</a>
+                            <a href="./contact.html" class="hover:text-custom-teal-dark">Hubungi Kami</a>
                         </div>
                         
                         <div class="relative">
                             <button id="language-toggle" class="flex items-center text-gray-700 hover:text-custom-teal-dark">
-                                <span>Malay</span>
+                                <span>Bahasa Melayu</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                                 </svg>
                             </button>
                             <div id="language-menu" class="hidden absolute right-0 mt-2 w-40 bg-white rounded-xl shadow-xl z-20">
-                                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Malay</a>
-                                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">English</a>
+                                <a href="./index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Bahasa Melayu</a>
+                                <a href="../../../../index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Inggeris</a>
                             </div>
                         </div>
                         
@@ -69,16 +68,16 @@
 
                        <div class="flex items-center space-x-3">
                          <a href="./login.html" class="
-                                 px-5 py-2 text-sm font-medium text-custom-teal-dark border border-custom-teal-dark rounded-xl 
-                                 hover:bg-custom-teal-dark hover:text-white
-                                 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out ">
-                                 Login
+                                  px-5 py-2 text-sm font-medium text-custom-teal-dark border border-custom-teal-dark rounded-xl 
+                                  hover:bg-custom-teal-dark hover:text-white
+                                  hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out ">
+                                  Masuk
                          </a>
                          <a href="./register.html" class="
-                                 px-5 py-2 text-sm font-medium text-white bg-custom-teal-dark rounded-xl 
-                                 hover:bg-custom-teal-dark/90 
-                                 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out ">
-                                 Let's Start
+                                  px-5 py-2 text-sm font-medium text-white bg-custom-teal-dark rounded-xl 
+                                  hover:bg-custom-teal-dark/90 
+                                  hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out ">
+                                  Mari Mulakan
                          </a>
                        </div>
                     </div>
@@ -95,27 +94,27 @@
 
             <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-lg">
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="./index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Home</a>
-                    <a href="./src/views/pages/product.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Product</a>
-                    <a href="./src/views/pages/plan.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Plan</a>
-                    <a href="./src/views/pages/contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Contact</a>
+                    <a href="./index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Laman Utama</a>
+                    <a href="./product.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Produk</a>
+                    <a href="./plan.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Pelan</a>
+                    <a href="./contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Hubungi Kami</a>
                     
                     <div class="border-t border-gray-200 my-2"></div>
                     
-                    <p class="px-3 pt-2 text-xs font-semibold text-gray-400 uppercase">Language</p>
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Malay</a>
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">English</a>
+                    <p class="px-3 pt-2 text-xs font-semibold text-gray-400 uppercase">Bahasa</p>
+                    <a href="./index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Bahasa Melayu</a>
+                    <a href="../../../../index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Inggeris</a>
                     
                     <div class="border-t border-gray-200 my-2"></div>
 
                     <div class="flex items-center px-3 py-2 space-x-3">
                         <a href="./login.html" class="w-full text-center px-5 py-2 text-sm font-medium text-custom-teal-dark border border-custom-teal-dark rounded-xl hover:bg-custom-teal-dark hover:text-white
-                                 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out">
-                                 Login
+                                  hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out">
+                                  Masuk
                         </a>
                         <a href="./register.html" class="w-full text-center px-5 py-2 text-sm font-medium text-white bg-custom-teal-dark rounded-xl hover:bg-custom-teal-dark/90 
-                                 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out">
-                                 Let's Start
+                                  hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out">
+                                  Mari Mulakan
                         </a>
                     </div>
                 </div>
@@ -125,40 +124,40 @@
 
     <main>
      <section class="relative bg-cover bg-center text-white" 
-              style="background-image: url('./assets/images/background.jpg');">
-         
-         <div class="absolute inset-0 bg-[#063A4A]/85"></div>
+             style="background-image: url('./assets/images/background.jpg');">
+        
+       <div class="absolute inset-0 bg-[#063A4A]/85"></div>
 
-         <div class="container mx-auto px-6 py-24 md:py-32 lg:py-40 relative z-10">
-             
-             <div class="flex flex-col md:flex-row items-center gap-12">
-                 
-                 <div class="md:w-1/2 lg:w-3/5 text-center md:text-left">
-                     <p class="font-semibold text-lg text-blue-fb">Kongsi Niaga</p>
-                     <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mt-3 leading-tight text-white">
-                         Empowering businesses with a secure, efficient B2B platform, fostering growth and trust through seamless transactions.
-                     </h1>
-                     <p class="mt-4 text-lg text-gray-300">
-                         Connecting, Commerce, Creating Community.
-                     </p>
-                     <div class="mt-8 flex flex-col sm:flex-row items-center sm:items-start justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-                         <a href="./register.html" class="w-full sm:w-auto text-center px-8 py-3 font-semibold text-blue-fb border-2 border-blue-fb rounded-xl hover:bg-blue-fb hover:text-white transition-all duration-300 ease-in-out">
-                             NEW MEMBER
-                         </a>
-                         <a href="./src/views/pages/plan.html" class="w-full sm:w-auto text-center px-8 py-3 font-semibold text-white bg-custom-teal rounded-xl hover:opacity-90 transition-opacity duration-300">
-                             PLAN KAMI
-                         </a>
-                     </div>
-                 </div>
+       <div class="container mx-auto px-6 py-24 md:py-32 lg:py-40 relative z-10">
+            
+           <div class="flex flex-col md:flex-row items-center gap-12">
+               
+               <div class="md:w-1/2 lg:w-3/5 text-center md:text-left">
+                   <p class="font-semibold text-lg text-blue-fb">Kongsi Niaga</p>
+                   <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mt-3 leading-tight text-white">
+                        Memperkasakan perniagaan dengan platform B2B yang selamat dan cekap, memupuk pertumbuhan dan kepercayaan melalui transaksi yang lancar.
+                   </h1>
+                   <p class="mt-4 text-lg text-gray-300">
+                        Menghubung, Berdagang, Membina Komuniti.
+                   </p>
+                   <div class="mt-8 flex flex-col sm:flex-row items-center sm:items-start justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                       <a href="./register.html" class="w-full sm:w-auto text-center px-8 py-3 font-semibold text-blue-fb border-2 border-blue-fb rounded-xl hover:bg-blue-fb hover:text-white transition-all duration-300 ease-in-out">
+                           NEW MEMBER
+                       </a>
+                       <a href="./plan.html" class="w-full sm:w-auto text-center px-8 py-3 font-semibold text-white bg-custom-teal rounded-xl hover:opacity-90 transition-opacity duration-300">
+                           PLAN KAMI
+                       </a>
+                   </div>
+               </div>
 
-                 <div class="md:w-1/2 lg:w-2/5 mt-10 md:mt-0">
-                     <img src="./assets/images/image.png" 
-                          alt="Ilustrasi Platform B2B" 
-                          class="w-full h-auto rounded-xl shadow-2xl">
-                 </div>
+               <div class="md:w-1/2 lg:w-2/5 mt-10 md:mt-0">
+                   <img src="../../../../assets/images/image.png" 
+                        alt="Ilustrasi Platform B2B" 
+                        class="w-full h-auto rounded-xl shadow-2xl">
+               </div>
 
-             </div>
-         </div>
+           </div>
+       </div>
      </section>
 
 
@@ -167,14 +166,14 @@
 
                 <div class="flex flex-col md:flex-row justify-between items-start mb-12 md:mb-16">
                     <div class="w-full md:w-1/2 mb-6 md:mb-0">
-                        <p class="text-sm font-semibold text-blue-fb uppercase tracking-wider">Key Advantages</p>
+                        <p class="text-sm font-semibold text-blue-fb uppercase tracking-wider">Kelebihan Utama</p>
                         <h2 class="text-3xl md:text-4xl font-bold text-custom-teal mt-2">
-                            Features Overview
+                            Gambaran Keseluruhan Ciri
                         </h2>
                     </div>
                     <div class="w-full md:w-1/2 md:pl-8">
                         <p class="text-base text-custom-teal leading-relaxed">
-                            Kongsi Niaga: Streamlining B2B transactions with efficiency, trust, and a uniquely touch for unparalleled business growth.
+                            Kongsi Niaga: Memudahkan transaksi B2B dengan kecekapan, kepercayaan, dan sentuhan unik untuk pertumbuhan perniagaan yang tiada tandingan.
                         </p>
                     </div>
                 </div>
@@ -188,9 +187,9 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5h-6" />
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-custom-teal mb-2">RFQ Management</h3>
+                        <h3 class="text-xl font-bold text-custom-teal mb-2">Pengurusan RFQ</h3>
                         <p class="text-base text-custom-teal">
-                            Efficient RFQ management streamlines procurement, saving time and resources for businesses on Kongsi Niaga.
+                            Pengurusan RFQ yang cekap memudahkan perolehan, menjimatkan masa dan sumber untuk perniagaan di Kongsi Niaga.
                         </p>
                     </div>
 
@@ -201,9 +200,9 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.012 9.012 0 0 0 9-9c0-5-4.03-9-9-9s-9 4-9 9c0 .341.02.68.06 1.01" />
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-custom-teal mb-2">Product Sourcing</h3>
+                        <h3 class="text-xl font-bold text-custom-teal mb-2">Penyumberan Produk</h3>
                         <p class="text-base text-custom-teal">
-                            Filterable product catalogs simplify sourcing, connecting businesses with the right suppliers on Kongsi Niaga.
+                            Katalog produk yang boleh ditapis memudahkan penyumberan, menghubungkan perniagaan dengan pembekal yang tepat di Kongsi Niaga.
                         </p>
                     </div>
 
@@ -213,9 +212,9 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286Z" />
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-custom-teal mb-2">Data Security</h3>
+                        <h3 class="text-xl font-bold text-custom-teal mb-2">Keselamatan Data</h3>
                         <p class="text-base text-custom-teal">
-                            Secure, GDPR-compliant platform ensures data privacy and builds trust for businesses on Kongsi Niaga.
+                            Platform yang selamat dan patuh GDPR memastikan privasi data dan membina kepercayaan untuk perniagaan di Kongsi Niaga.
                         </p>
                     </div>
                     
@@ -228,28 +227,28 @@
              <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                  
                  <div class="flex-shrink-0 flex flex-row items-center justify-between lg:flex-col lg:items-start gap-24 md:gap-0">
-    
+     
                    <h2 class="text-4xl md:text-5xl lg:mb-8">
-                       Let's<br><span class="text-white font-bold">Try Our</span><br><span class="font-bold text-blue-fb">Product</span>
+                        Jom<br><span class="text-white font-bold">Cuba</span><br><span class="font-bold text-blue-fb">Produk Kami</span>
                    </h2>
 
-                    <div class="flex flex-shrink-0 justify-center lg:justify-start space-x-4">
-                        <button id="scroll-left-btn" class="w-12 h-12 rounded-full border-2 border-white/40 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label="Previous Product">
-                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>
-                        </button>
-                        <button id="scroll-right-btn" class="w-12 h-12 rounded-full border-2 border-white/40 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label="Next Product">
-                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
-                        </button>
-                    </div>
+                     <div class="flex flex-shrink-0 justify-center lg:justify-start space-x-4">
+                         <button id="scroll-left-btn" class="w-12 h-12 rounded-full border-2 border-white/40 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label="Produk Sebelumnya">
+                             <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>
+                         </button>
+                         <button id="scroll-right-btn" class="w-12 h-12 rounded-full border-2 border-white/40 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label="Produk Seterusnya">
+                             <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
+                         </button>
+                     </div>
 
 
-                </div>
+                 </div>
 
                  <div class="flex-1 w-full lg:w-auto overflow-hidden">
                      <div id="product-container" class="flex space-x-6 overflow-x-auto scrollbar-hide pb-4 scroll-smooth">
 
                          <div class="group relative flex-shrink-0 md:w-82 w-92 h-96 rounded-2xl overflow-hidden shadow-lg">
-                           <img src="./assets/images/produk1.jpg" alt="Miraculous Face Mist" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ">
+                           <img src="../../../../assets/images/produk1.jpg" alt="Miraculous Face Mist" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ">
                            
                            <div class="absolute inset-0 bg-gradient-to-b from-custom-teal-dark/0 to-custom-teal-dark"></div>
                            <div class="absolute bottom-0 left-0 p-5 ">
@@ -265,16 +264,16 @@
                                  bg-gradient-to-b from-custom-teal-dark/60 to-custom-teal-dark
                            ">
                                <p class="text-white text-sm mb-4">
-                                   Keep your skin fresh and moisturized with our miraculous face mist.
+                                    Kekalkan kesegaran dan kelembapan kulit anda dengan semburan muka ajaib kami.
                                </p>
-                               <a href="./src/views/pages/product_detail.html" class="border-2 border-white text-white font-bold py-2 px-6 rounded-xl hover:bg-blue-fb hover:border-blue-fb transition-colors">
-                                   Detail
+                               <a href="./product_detail.html" class="border-2 border-white text-white font-bold py-2 px-6 rounded-xl hover:bg-blue-fb hover:border-blue-fb transition-colors">
+                                   Butiran
                                </a>
                            </div>
                          </div>
                          
                          <div class="group relative flex-shrink-0 w-82 h-96 rounded-2xl overflow-hidden shadow-lg">
-                           <img src="./assets/images/produk2.jpg" alt="Moringano" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ">
+                           <img src="../../../../assets/images/produk2.jpg" alt="Moringano" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ">
                            
                            <div class="absolute inset-0 bg-gradient-to-b from-custom-teal-dark/0 to-custom-teal-dark"></div>
                            <div class="absolute bottom-0 left-0 p-5 ">
@@ -290,16 +289,16 @@
                                  bg-gradient-to-b from-custom-teal-dark/60 to-custom-teal-dark
                            ">
                                <p class="text-white text-sm mb-4">
-                                   Premium green superfood with Moringa and Ganoderma for your daily health.
+                                    Makanan super hijau premium dengan Moringa dan Ganoderma untuk kesihatan harian anda.
                                  </p>
-                                 <a href="./src/views/pages/product_detail.html" class="border-2 border-white text-white font-bold py-2 px-6 rounded-xl hover:bg-blue-fb hover:border-blue-fb transition-colors">
-                                   Detail
+                                 <a href="./product_detail.html" class="border-2 border-white text-white font-bold py-2 px-6 rounded-xl hover:bg-blue-fb hover:border-blue-fb transition-colors">
+                                   Butiran
                                  </a>
                            </div>
                          </div>
                          
                          <div class="group relative flex-shrink-0 w-82 h-96 rounded-2xl overflow-hidden shadow-lg">
-                           <img src="./assets/images/produk1.jpg" alt="Miraculous Face Mist" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ">
+                           <img src="../../../../assets/images/produk1.jpg" alt="Miraculous Face Mist" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ">
                            
                            <div class="absolute inset-0 bg-gradient-to-b from-custom-teal-dark/0 to-custom-teal-dark"></div>
                            <div class="absolute bottom-0 left-0 p-5 ">
@@ -315,16 +314,16 @@
                                  bg-gradient-to-b from-custom-teal-dark/60 to-custom-teal-dark
                            ">
                                <p class="text-white text-sm mb-4">
-                                   Keep your skin fresh and moisturized with our miraculous face mist.
+                                    Kekalkan kesegaran dan kelembapan kulit anda dengan semburan muka ajaib kami.
                                </p>
-                               <a href="./src/views/pages/product_detail.html" class="border-2 border-white text-white font-bold py-2 px-6 rounded-xl hover:bg-blue-fb hover:border-blue-fb transition-colors">
-                                   Detail
+                               <a href="./product_detail.html" class="border-2 border-white text-white font-bold py-2 px-6 rounded-xl hover:bg-blue-fb hover:border-blue-fb transition-colors">
+                                   Butiran
                                </a>
                            </div>
                          </div>
                          
                          <div class="group relative flex-shrink-0 w-82 h-96 rounded-2xl overflow-hidden shadow-lg">
-                           <img src="./assets/images/produk2.jpg" alt="Moringano" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ">
+                           <img src="../../../../assets/images/produk2.jpg" alt="Moringano" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ">
                            
                            <div class="absolute inset-0 bg-gradient-to-b from-custom-teal-dark/0 to-custom-teal-dark"></div>
                            <div class="absolute bottom-0 left-0 p-5 ">
@@ -340,60 +339,10 @@
                                  bg-gradient-to-b from-custom-teal-dark/60 to-custom-teal-dark
                            ">
                                <p class="text-white text-sm mb-4">
-                                   Premium green superfood with Moringa and Ganoderma for your daily health.
+                                    Makanan super hijau premium dengan Moringa dan Ganoderma untuk kesihatan harian anda.
                                  </p>
-                                 <a href="./src/views/pages/product_detail.html" class="border-2 border-white text-white font-bold py-2 px-6 rounded-xl hover:bg-blue-fb hover:border-blue-fb transition-colors">
-                                   Detail
-                                 </a>
-                           </div>
-                         </div>
-                         
-                         <div class="group relative flex-shrink-0 w-82 h-96 rounded-2xl overflow-hidden shadow-lg">
-                           <img src="./assets/images/produk1.jpg" alt="Miraculous Face Mist" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ">
-                           
-                           <div class="absolute inset-0 bg-gradient-to-b from-custom-teal-dark/0 to-custom-teal-dark"></div>
-                           <div class="absolute bottom-0 left-0 p-5 ">
-                               <h4 class="font-medium text-2xl text-white">Miraculous Face Mist</h4>
-                               <p class="text-lg text-gray-200">RM39.90</p>
-                           </div>
-                           <div class="
-                                 absolute inset-0 
-                                 flex flex-col items-center justify-center p-6 text-center 
-                                 opacity-0 group-hover:opacity-100 
-                                 transition-opacity duration-300
-                                 
-                                 bg-gradient-to-b from-custom-teal-dark/60 to-custom-teal-dark
-                           ">
-                               <p class="text-white text-sm mb-4">
-                                   Keep your skin fresh and moisturized with our miraculous face mist.
-                               </p>
-                               <a href="./src/views/pages/product_detail.html" class="border-2 border-white text-white font-bold py-2 px-6 rounded-xl hover:bg-blue-fb hover:border-blue-fb transition-colors">
-                                   Detail
-                               </a>
-                           </div>
-                         </div>
-                         
-                         <div class="group relative flex-shrink-0 w-82 h-96 rounded-2xl overflow-hidden shadow-lg">
-                           <img src="./assets/images/produk2.jpg" alt="Moringano" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ">
-                           
-                           <div class="absolute inset-0 bg-gradient-to-b from-custom-teal-dark/0 to-custom-teal-dark"></div>
-                           <div class="absolute bottom-0 left-0 p-5 ">
-                               <h4 class="font-medium text-2xl text-white">Moringano</h4>
-                               <p class="text-lg text-gray-200">RM49.90</p>
-                           </div>
-                           <div class="
-                                 absolute inset-0 
-                                 flex flex-col items-center justify-center p-6 text-center 
-                                 opacity-0 group-hover:opacity-100 
-                                 transition-opacity duration-300
-                                 
-                                 bg-gradient-to-b from-custom-teal-dark/60 to-custom-teal-dark
-                           ">
-                               <p class="text-white text-sm mb-4">
-                                   Premium green superfood with Moringa and Ganoderma for your daily health.
-                                 </p>
-                                 <a href="./src/views/pages/product_detail.html" class="border-2 border-white text-white font-bold py-2 px-6 rounded-xl hover:bg-blue-fb hover:border-blue-fb transition-colors">
-                                   Detail
+                                 <a href="./product_detail.html" class="border-2 border-white text-white font-bold py-2 px-6 rounded-xl hover:bg-blue-fb hover:border-blue-fb transition-colors">
+                                   Butiran
                                  </a>
                            </div>
                          </div>
@@ -405,35 +354,32 @@
      </section>
 
 
-    <!-- Section 4: Payment Process -->
     <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="bg-gradient-to-r from-custom-teal-dark to-custom-teal-dark rounded-3xl p-8 sm:p-12 lg:p-16 shadow-2xl">
             <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
-                <!-- Left Content -->
                 <div class="mb-8 lg:mb-0 lg:max-w-2xl">
                     <div class="mb-4">
                         <span class="inline-block text-white text-md tracking-wide uppercase">
-                            TRY IT NOW
+                            CUBA SEKARANG
                         </span>
                     </div>
                     
                     <h2 class="text-3xl sm:text-4xl md:text-4xl font-semibold text-white mb-6 leading-tight">
-                        Ready to level up your payment process?
+                        Bersedia untuk menaik taraf proses pembayaran anda?
                     </h2>
                     
                     <p class="text-white text-md sm:text-md leading-relaxed max-w-xl">
-                        Supports small businesses with simple invoicing, powerful integrations, and cash flow management tools
+                        Menyokong perniagaan kecil dengan penginvoisan mudah, integrasi berkuasa, dan alatan pengurusan aliran tunai.
                     </p>
                 </div>
                 
-                <!-- Right Content - CTA Buttons -->
-                <div class="flex  sm:flex-row gap-4 mx-auto  lg:gap-4">
+                <div class="flex sm:flex-row gap-4 mx-auto lg:gap-4">
                     <button class="bg-custom-teal hover:bg-custom-teal/60 text-white font-semibold px-6 py-2 md:px-8 md:py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-                        Get Started
+                        Mulakan
                     </button>
                     
                     <button class="bg-transparent border-2 border-white text-white hover:bg-custom-teal hover:border-custom-teal font-semibold px-6 py-2 md:px-8 md:py-4 rounded-xl transition-all duration-300 transform hover:scale-105">
-                        Learn Now
+                        Ketahui Sekarang
                     </button>
                 </div>
             </div>
@@ -448,10 +394,10 @@
               
               <div class="col-span-1 md:col-span-2 lg:col-span-2">
                   <a href="#">
-                      <img class="h-10 mb-6" src="./assets/images/logo.png" alt="Kongsi Niaga Logo">
+                      <img class="h-10 mb-6" src="../../../../assets/images/logo.png" alt="Logo Kongsi Niaga">
                   </a>
                   <p class="text-custom-teal max-w-sm">
-                      B2B platform connecting businesses for efficient and trustworthy transactions.
+                      Platform B2B yang menghubungkan perniagaan untuk transaksi yang cekap dan boleh dipercayai.
                   </p>
                   <div class="flex space-x-4 mt-6">
                       <a href="#" class="text-custom-teal hover:text-blue-fb transition-colors">
@@ -475,18 +421,18 @@
               <div>
                   <h3 class="text-lg font-semibold text-custom-teal-dark mb-4">Menu</h3>
                   <ul class="space-y-3">
-                      <li><a href="./index.html" class="text-custom-teal hover:text-blue-fb transition-colors">Home</a></li>
-                      <li><a href="./src/views/pages/product.html" class="text-custom-teal hover:text-blue-fb transition-colors">Product</a></li>
-                      <li><a href="./src/views/pages/plan.html" class="text-custom-teal hover:text-blue-fb transition-colors">Plan</a></li>
-                      <li><a href="./src/views/pages/contact.html" class="text-custom-teal hover:text-blue-fb transition-colors">Contact</a></li>
+                      <li><a href="./index.html" class="text-custom-teal hover:text-blue-fb transition-colors">Laman Utama</a></li>
+                      <li><a href="./product.html" class="text-custom-teal hover:text-blue-fb transition-colors">Produk</a></li>
+                      <li><a href="./plan.html" class="text-custom-teal hover:text-blue-fb transition-colors">Pelan</a></li>
+                      <li><a href="./contact.html" class="text-custom-teal hover:text-blue-fb transition-colors">Hubungi Kami</a></li>
                   </ul>
               </div>
 
               <div>
-                  <h3 class="text-lg font-semibold text-custom-teal-dark mb-4">Information</h3>
+                  <h3 class="text-lg font-semibold text-custom-teal-dark mb-4">Maklumat</h3>
                   <ul class="space-y-3">
-                      <li><a href="#" class="text-custom-teal hover:text-blue-fb transition-colors">Terms of Services</a></li>
-                      <li><a href="#" class="text-custom-teal hover:text-blue-fb transition-colors">Privacy Policy</a></li>
+                      <li><a href="#" class="text-custom-teal hover:text-blue-fb transition-colors">Syarat Perkhidmatan</a></li>
+                      <li><a href="#" class="text-custom-teal hover:text-blue-fb transition-colors">Dasar Privasi</a></li>
                   </ul>
               </div>
               
@@ -494,11 +440,11 @@
 
           <div class="border-t border-gray-300 pt-6">
               <p class=" text-custom-teal">
-                  ©2025 All Right Reserved By <a href="./index.html" class="text-blue-fb hover:underline">KongsiNiaga</a>
+                  ©2025 Hak Cipta Terpelihara Oleh <a href="./index.html" class="text-blue-fb hover:underline">KongsiNiaga</a>
               </p>
           </div>
       </div>
-  </footer>
+    </footer>
 
     <script>
         // --- Skrip untuk fungsi Dropdown Bahasa dan Menu Mudah Alih ---
@@ -529,22 +475,22 @@
             }
         });
         
-        // --- Skrip Baru untuk Scroll Section 3 ---
+        // --- Skrip Baru untuk Skrol Bahagian Produk ---
         document.addEventListener('DOMContentLoaded', function() {
             const productContainer = document.getElementById('product-container');
             const scrollLeftBtn = document.getElementById('scroll-left-btn');
             const scrollRightBtn = document.getElementById('scroll-right-btn');
 
             if (productContainer && scrollLeftBtn && scrollRightBtn) {
-                // Tentukan jarak scroll (lebar satu kartu + margin)
-                const scrollAmount = 370; // 288px (w-72) + 24px (space-x-6)
+                // Tentukan jarak skrol (lebar satu kad + margin)
+                const scrollAmount = 370; 
 
                 scrollLeftBtn.addEventListener('click', () => {
-                    productContainer.scrollLeft -= scrollAmount;
+                    productContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
                 });
 
                 scrollRightBtn.addEventListener('click', () => {
-                    productContainer.scrollLeft += scrollAmount;
+                    productContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
                 });
             }
         });

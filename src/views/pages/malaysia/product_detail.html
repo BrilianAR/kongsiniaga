@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kongsi Niaga - B2B Platform</title>
+    <title>Kongsi Niaga - Platform B2B</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script>
         // Konfigurasi untuk memadankan warna butang dan tema
         tailwind.config = {
@@ -13,14 +14,14 @@
                     colors: {
                         'custom-teal-dark': '#063a49',
                         'custom-teal': '#1a4e69',
-                        'custom-blue': '#0866ff', // Warna untuk butang di hero section
+                        'custom-blue': '#0866ff', // Warna untuk butang di bahagian hero
                     }
                 }
             }
         }
     </script>
      <style>
-        /* CSS untuk menyembunyikan scrollbar pada kontainer produk */
+        /* CSS untuk menyembunyikan bar skrol pada bekas produk */
         .scrollbar-hide {
             -ms-overflow-style: none; /* IE dan Edge */
             scrollbar-width: none; /* Firefox */
@@ -33,100 +34,100 @@
 <body>
 
 <header>
-        <nav class="bg-white shadow-lg relative sticky top-0 z-50">
-            <div class="container mx-auto px-6 py-4">
-                <div class="flex items-center justify-between">
+    <nav class="bg-white shadow-lg relative sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                
+                <div>
+                    <a href="#">
+                        <img class="h-10" src="../../../../assets/images/logo.png" alt="Logo Kongsi Niaga">
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-6">
+                    <div class="flex items-center space-x-6 align-center mx-auto text-base text-gray-700">
+                        <a href="./index.html" class="hover:text-custom-teal-dark">Laman Utama</a>
+                        <a href="./product.html" class="hover:text-custom-teal-dark">Produk</a>
+                        <a href="./plan.html" class="hover:text-custom-teal-dark">Pelan</a>
+                        <a href="./contact.html" class="hover:text-custom-teal-dark">Hubungi Kami</a>
+                    </div>
                     
-                    <div>
-                        <a href="#">
-                            <img class="h-10" src="../../../assets/images/logo.png" alt="Kongsi Niaga Logo">
-                        </a>
-                    </div>
-
-                    <div class="hidden md:flex items-center space-x-6">
-                        <div class="flex items-center space-x-6 align-center mx-auto text-base text-gray-700">
-                            <a href="../../../index.html" class="hover:text-custom-teal-dark">Home</a>
-                            <a href="./product.html" class="hover:text-custom-teal-dark">Product</a>
-                            <a href="./plan.html" class="hover:text-custom-teal-dark">Plan</a>
-                            <a href="./contact.html" class="hover:text-custom-teal-dark">Contact</a>
-                        </div>
-                        
-                        <div class="relative">
-                            <button id="language-toggle" class="flex items-center text-gray-700 hover:text-custom-teal-dark">
-                                <span>Malay</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <div id="language-menu" class="hidden absolute right-0 mt-2 w-40 bg-white rounded-xl shadow-xl z-20">
-                                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-white">Malay</a>
-                                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-white">English</a>
-                            </div>
-                        </div>
-                        
-                        <div class="h-6 border-l border-gray-300"></div>
-
-                       <div class="flex items-center space-x-3">
-                         <a href="../../../login.html" class="
-                                 px-5 py-2 text-sm font-medium text-custom-teal-dark border border-custom-teal-dark rounded-xl 
-                                 hover:bg-custom-teal-dark hover:text-white
-                                 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out ">
-                                 Login
-                         </a>
-                         <a href="../../../register.html" class="
-                                 px-5 py-2 text-sm font-medium text-white bg-custom-teal-dark rounded-xl 
-                                 hover:bg-custom-teal-dark/90 
-                                 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out ">
-                                 Let's Start
-                         </a>
-                       </div>
-                    </div>
-
-                    <div class="md:hidden">
-                        <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-800 focus:outline-none">
-                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    <div class="relative">
+                        <button id="language-toggle" class="flex items-center text-gray-700 hover:text-custom-teal-dark">
+                            <span>Bahasa Melayu</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                             </svg>
                         </button>
+                        <div id="language-menu" class="hidden absolute right-0 mt-2 w-40 bg-white rounded-xl shadow-xl z-20">
+                            <a href="./product_detail.html" class="block px-4 py-2 text-gray-800 hover:bg-white">Bahasa Melayu</a>
+                            <a href="../product_detail.html" class="block px-4 py-2 text-gray-800 hover:bg-white">Inggeris</a>
+                        </div>
                     </div>
+                    
+                    <div class="h-6 border-l border-gray-300"></div>
+
+                   <div class="flex items-center space-x-3">
+                     <a href="./login.html" class="
+                               px-5 py-2 text-sm font-medium text-custom-teal-dark border border-custom-teal-dark rounded-xl 
+                               hover:bg-custom-teal-dark hover:text-white
+                               hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out ">
+                               Masuk
+                     </a>
+                     <a href="./register.html" class="
+                               px-5 py-2 text-sm font-medium text-white bg-custom-teal-dark rounded-xl 
+                               hover:bg-custom-teal-dark/90 
+                               hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out ">
+                               Mari Mulakan
+                     </a>
+                   </div>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
+        </div>
 
-            <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-lg">
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="../../../index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Home</a>
-                    <a href="./product.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Product</a>
-                    <a href="./plan.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Plan</a>
-                    <a href="./contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Contact</a>
-                    
-                    <div class="border-t border-gray-200 my-2"></div>
-                    
-                    <p class="px-3 pt-2 text-xs font-semibold text-gray-400 uppercase">Language</p>
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Malay</a>
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">English</a>
-                    
-                    <div class="border-t border-gray-200 my-2"></div>
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="./index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Laman Utama</a>
+                <a href="./product.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Produk</a>
+                <a href="./plan.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Pelan</a>
+                <a href="./contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Hubungi Kami</a>
+                
+                <div class="border-t border-gray-200 my-2"></div>
+                
+                <p class="px-3 pt-2 text-xs font-semibold text-gray-400 uppercase">Bahasa</p>
+                <a href="./product_detail.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Bahasa Melayu</a>
+                <a href="../product_detail.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Inggeris</a>
+                
+                <div class="border-t border-gray-200 my-2"></div>
 
-                    <div class="flex items-center px-3 py-2 space-x-3">
-                        <a href="../../../login.html" class="w-full text-center px-5 py-2 text-sm font-medium text-custom-teal-dark border border-custom-teal-dark rounded-xl hover:bg-custom-teal-dark hover:text-white
-                                 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out">
-                                 Login
-                        </a>
-                        <a href="../../../register.html" class="w-full text-center px-5 py-2 text-sm font-medium text-white bg-custom-teal-dark rounded-xl hover:bg-custom-teal-dark/90 
-                                 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out">
-                                 Let's Start
-                        </a>
-                    </div>
+                <div class="flex items-center px-3 py-2 space-x-3">
+                    <a href="./login.html" class="w-full text-center px-5 py-2 text-sm font-medium text-custom-teal-dark border border-custom-teal-dark rounded-xl hover:bg-custom-teal-dark hover:text-white
+                               hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out">
+                               Masuk
+                    </a>
+                    <a href="./register.html" class="w-full text-center px-5 py-2 text-sm font-medium text-white bg-custom-teal-dark rounded-xl hover:bg-custom-teal-dark/90 
+                               hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out">
+                               Mari Mulakan
+                    </a>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
 
     <div class="container mx-auto mt-10 px-4 sm:px-6 md:px-24">
         <div class="text-sm text-gray-500 mb-8">
-            <a href="#" class="hover:text-gray-700">Home</a>
+            <a href="#" class="hover:text-gray-700">Laman Utama</a>
             <span class="mx-2">&gt;</span>
-            <a href="#" class="hover:text-gray-700">Product</a>
+            <a href="#" class="hover:text-gray-700">Produk</a>
             <span class="mx-2">&gt;</span>
             <span class="text-gray-900 font-medium">Moringano</span>
         </div>
@@ -134,22 +135,22 @@
         <main class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <div>
                 <div class="mb-4">
-                    <img id="mainImage" src="./../../../assets/images/produk2.jpg" alt="Moringano Superfood Bottle" class="w-full h-auto object-cover rounded-lg shadow-md">
+                    <img id="mainImage" src="../../../../assets/images/produk2.jpg" alt="Botol Makanan Super Moringano" class="w-full h-auto object-cover rounded-lg shadow-md">
                 </div>
                 <div class="flex justify-center flex-wrap gap-4 items-center">
-                    <img src="./../../../assets/images/produk2.jpg" alt="Thumbnail 1" class="thumbnail h-14 w-14 md:w-24 md:h-24 object-cover rounded-md cursor-pointer border-2 border-custom-blue shadow-sm">
-                    <img src="./../../../assets/images/produk2.jpg" alt="Thumbnail 2" class="thumbnail h-14 w-14 md:w-24 md:h-24 object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-custom-blue">
-                    <img src="./../../../assets/images/produk2.jpg" alt="Thumbnail 3" class="thumbnail h-14 w-14 md:w-24 md:h-24 object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-custom-blue">
-                    <img src="./../../../assets/images/produk2.jpg" alt="Thumbnail 4" class="thumbnail h-14 w-14 md:w-24 md:h-24 object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-custom-blue">
+                    <img src="../../../../assets/images/produk2.jpg" alt="Gambar Kecil 1" class="thumbnail h-14 w-14 md:w-24 md:h-24 object-cover rounded-md cursor-pointer border-2 border-custom-blue shadow-sm">
+                    <img src="../../../../assets/images/produk2.jpg" alt="Gambar Kecil 2" class="thumbnail h-14 w-14 md:w-24 md:h-24 object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-custom-blue">
+                    <img src="../../../../assets/images/produk2.jpg" alt="Gambar Kecil 3" class="thumbnail h-14 w-14 md:w-24 md:h-24 object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-custom-blue">
+                    <img src="../../../../assets/images/produk2.jpg" alt="Gambar Kecil 4" class="thumbnail h-14 w-14 md:w-24 md:h-24 object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-custom-blue">
                 </div>
             </div>
 
             <div class="flex flex-col justify-center">
-                <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full self-start mb-3">Herbs</span>
+                <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full self-start mb-3">Herba</span>
                 <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Moringano</h1>
-                <p class="text-sm font-medium text-green-600 mt-2 mb-4">In stock</p>
+                <p class="text-sm font-medium text-green-600 mt-2 mb-4">Stok Tersedia</p>
                 <p class="text-gray-600 leading-relaxed mb-6">
-                    Moringold is moringa with ganoderma. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Moringold ialah moringa dengan ganoderma. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
                 <p class="text-2xl font-medium text-gray-900 mb-6">49.90 MYR</p>
                 
@@ -166,12 +167,12 @@
                     </div>
 
                     <button class="w-full md:w-auto md:max-w-xs bg-custom-blue text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-custom-blue/60 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
-                        Purchase Now
+                        Beli Sekarang
                     </button>
                 </div>
 
                 <div class="mt-8 text-sm text-gray-500">
-                    <span class="font-medium text-gray-700">Tags:</span>
+                    <span class="font-medium text-gray-700">Tag:</span>
                     <a href="#" class="hover:text-custom-blue">herba</a>
                 </div>
             </div>
@@ -180,16 +181,16 @@
         <section class="py-12 md:py-16 ">
             <div class="border-t mb-6"></div>
             <div class="container mx-auto md:px-4 ">
-                <h2 class="md:text-3xl text-2xl font-bold text-gray-800 mb-8">Explore Related Product</h2>
+                <h2 class="md:text-3xl text-2xl font-bold text-gray-800 mb-8">Terokai Produk Berkaitan</h2>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     
                     <div class="product-card-slider bg-white border border-gray-200 rounded-2xl shadow-lg p-4 flex flex-col">
                         <div class="relative bg-gray-100 rounded-xl mb-4">
                             
-                            <img src="./../../../assets/images/produk2.jpg" alt="Moringano Product 1" class="image-slide w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
-                            <img src="./../../../assets/images/produk1.jpg" alt="Moringano Product 2" class="image-slide hidden w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
-                            <img src="./../../../assets/images/produk2.jpg" alt="Moringano Product 3" class="image-slide hidden w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
+                            <img src="../../../../assets/images/produk2.jpg" alt="Produk Moringano 1" class="image-slide w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
+                            <img src="../../../../assets/images/produk1.jpg" alt="Produk Moringano 2" class="image-slide hidden w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
+                            <img src="../../../../assets/images/produk2.jpg" alt="Produk Moringano 3" class="image-slide hidden w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
                             
                             <button class="prev-btn absolute top-1/2 left-2 -translate-y-1/2 bg-white/50 hover:bg-white/80 p-1 rounded-full text-gray-800 focus:outline-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
@@ -208,7 +209,7 @@
                                 <p class="text-gray-600">RM49.90</p>
                             </div>
                             <a href="./product_detail.html" class="bg-custom-teal text-white text-sm font-semibold px-5 py-2 rounded-lg hover:bg-custom-teal-dark transition-colors">
-                                Details
+                                Butiran
                             </a>
                         </div>
                     </div>
@@ -216,9 +217,9 @@
                     <div class="product-card-slider bg-white border border-gray-200 rounded-2xl shadow-lg p-4 flex flex-col">
                         <div class="relative bg-gray-100 rounded-xl mb-4">
                             
-                            <img src="./../../../assets/images/produk2.jpg" alt="Moringano Product 1" class="image-slide w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
-                            <img src="./../../../assets/images/produk1.jpg" alt="Moringano Product 2" class="image-slide hidden w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
-                            <img src="./../../../assets/images/produk2.jpg" alt="Moringano Product 3" class="image-slide hidden w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
+                            <img src="../../../../assets/images/produk2.jpg" alt="Produk Moringano 1" class="image-slide w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
+                            <img src="../../../../assets/images/produk1.jpg" alt="Produk Moringano 2" class="image-slide hidden w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
+                            <img src="../../../../assets/images/produk2.jpg" alt="Produk Moringano 3" class="image-slide hidden w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
                             
                             <button class="prev-btn absolute top-1/2 left-2 -translate-y-1/2 bg-white/50 hover:bg-white/80 p-1 rounded-full text-gray-800 focus:outline-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
@@ -237,7 +238,7 @@
                                 <p class="text-gray-600">RM49.90</p>
                             </div>
                             <a href="./product_detail.html" class="bg-custom-teal text-white text-sm font-semibold px-5 py-2 rounded-lg hover:bg-custom-teal-dark transition-colors">
-                                Details
+                                Butiran
                             </a>
                         </div>
                     </div>
@@ -245,9 +246,9 @@
                     <div class="product-card-slider bg-white border border-gray-200 rounded-2xl shadow-lg p-4 flex flex-col">
                         <div class="relative bg-gray-100 rounded-xl mb-4">
                             
-                            <img src="./../../../assets/images/produk2.jpg" alt="Moringano Product 1" class="image-slide w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
-                            <img src="./../../../assets/images/produk1.jpg" alt="Moringano Product 2" class="image-slide hidden w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
-                            <img src="./../../../assets/images/produk2.jpg" alt="Moringano Product 3" class="image-slide hidden w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
+                            <img src="../../../../assets/images/produk2.jpg" alt="Produk Moringano 1" class="image-slide w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
+                            <img src="../../../../assets/images/produk1.jpg" alt="Produk Moringano 2" class="image-slide hidden w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
+                            <img src="../../../../assets/images/produk2.jpg" alt="Produk Moringano 3" class="image-slide hidden w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
                             
                             <button class="prev-btn absolute top-1/2 left-2 -translate-y-1/2 bg-white/50 hover:bg-white/80 p-1 rounded-full text-gray-800 focus:outline-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
@@ -266,7 +267,7 @@
                                 <p class="text-gray-600">RM49.90</p>
                             </div>
                             <a href="./product_detail.html" class="bg-custom-teal text-white text-sm font-semibold px-5 py-2 rounded-lg hover:bg-custom-teal-dark transition-colors">
-                                Details
+                                Butiran
                             </a>
                         </div>
                     </div>
@@ -274,9 +275,9 @@
                     <div class="product-card-slider bg-white border border-gray-200 rounded-2xl shadow-lg p-4 flex flex-col">
                         <div class="relative bg-gray-100 rounded-xl mb-4">
                             
-                            <img src="./../../../assets/images/produk2.jpg" alt="Moringano Product 1" class="image-slide w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
-                            <img src="./../../../assets/images/produk1.jpg" alt="Moringano Product 2" class="image-slide hidden w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
-                            <img src="./../../../assets/images/produk2.jpg" alt="Moringano Product 3" class="image-slide hidden w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
+                            <img src="../../../../assets/images/produk2.jpg" alt="Produk Moringano 1" class="image-slide w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
+                            <img src="../../../../assets/images/produk1.jpg" alt="Produk Moringano 2" class="image-slide hidden w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
+                            <img src="../../../../assets/images/produk2.jpg" alt="Produk Moringano 3" class="image-slide hidden w-full h-56 object-cover rounded-xl transition-opacity duration-300 ease-in-out">
                             
                             <button class="prev-btn absolute top-1/2 left-2 -translate-y-1/2 bg-white/50 hover:bg-white/80 p-1 rounded-full text-gray-800 focus:outline-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
@@ -295,7 +296,7 @@
                                 <p class="text-gray-600">RM49.90</p>
                             </div>
                             <a href="./product_detail.html" class="bg-custom-teal text-white text-sm font-semibold px-5 py-2 rounded-lg hover:bg-custom-teal-dark transition-colors">
-                                Details
+                                Butiran
                             </a>
                         </div>
                     </div>
@@ -304,7 +305,7 @@
                 
                 <div class="mt-12 text-center">
                     <a href="#" class="inline-block bg-custom-teal text-white font-bold text-sm px-8 py-3 rounded-lg hover:bg-custom-teal-dark transition-colors">
-                        Explore Our Product
+                        Terokai Produk Kami
                     </a>
                 </div>
                 
@@ -318,10 +319,10 @@
               
               <div class="col-span-1 md:col-span-2 lg:col-span-2">
                   <a href="#">
-                      <img class="h-10 mb-6" src="../../../assets/images/logo.png" alt="Kongsi Niaga Logo">
+                      <img class="h-10 mb-6" src="../../../../assets/images/logo.png" alt="Logo Kongsi Niaga">
                   </a>
                   <p class="text-custom-teal max-w-sm">
-                      B2B platform connecting businesses for efficient and trustworthy transactions.
+                      Platform B2B yang menghubungkan perniagaan untuk transaksi yang cekap dan boleh dipercayai.
                   </p>
                   <div class="flex space-x-4 mt-6">
                       <a href="#" class="text-custom-teal hover:text-custom-blue transition-colors">
@@ -345,18 +346,18 @@
               <div>
                   <h3 class="text-lg font-semibold text-custom-teal-dark mb-4">Menu</h3>
                   <ul class="space-y-3">
-                      <li><a href="../../../index.html" class="text-custom-teal hover:text-custom-blue transition-colors">Home</a></li>
-                      <li><a href="./product.html" class="text-custom-teal hover:text-custom-blue transition-colors">Product</a></li>
-                      <li><a href="./plan.html" class="text-custom-teal hover:text-custom-blue transition-colors">Plan</a></li>
-                      <li><a href="./contact.html" class="text-custom-teal hover:text-custom-blue transition-colors">Contact</a></li>
+                      <li><a href="./index.html" class="text-custom-teal hover:text-custom-blue transition-colors">Laman Utama</a></li>
+                      <li><a href="./product.html" class="text-custom-teal hover:text-custom-blue transition-colors">Produk</a></li>
+                      <li><a href="./plan.html" class="text-custom-teal hover:text-custom-blue transition-colors">Pelan</a></li>
+                      <li><a href="./contact.html" class="text-custom-teal hover:text-custom-blue transition-colors">Hubungi Kami</a></li>
                   </ul>
               </div>
 
               <div>
-                  <h3 class="text-lg font-semibold text-custom-teal-dark mb-4">Information</h3>
+                  <h3 class="text-lg font-semibold text-custom-teal-dark mb-4">Maklumat</h3>
                   <ul class="space-y-3">
-                      <li><a href="#" class="text-custom-teal hover:text-custom-blue transition-colors">Terms of Services</a></li>
-                      <li><a href="#" class="text-custom-teal hover:text-custom-blue transition-colors">Privacy Policy</a></li>
+                      <li><a href="#" class="text-custom-teal hover:text-custom-blue transition-colors">Syarat Perkhidmatan</a></li>
+                      <li><a href="#" class="text-custom-teal hover:text-custom-blue transition-colors">Dasar Privasi</a></li>
                   </ul>
               </div>
               
@@ -364,11 +365,11 @@
 
           <div class="border-t border-gray-300 pt-6">
               <p class=" text-custom-teal">
-                  ©2025 All Right Reserved By <a href="./index.html" class="text-custom-blue hover:underline">KongsiNiaga</a>
+                  ©2025 Hak Cipta Terpelihara Oleh <a href="./index.html" class="text-custom-blue hover:underline">KongsiNiaga</a>
               </p>
           </div>
       </div>
-  </footer>
+    </footer>
 
     <script>
         // --- Skrip untuk fungsi Dropdown Bahasa dan Menu Mudah Alih ---
@@ -399,33 +400,28 @@
             }
         });
         
-        // --- Skrip Baru untuk Scroll Section 3 ---
+        // Skrip untuk Galeri Imej Produk
         document.addEventListener('DOMContentLoaded', function() {
-            const productContainer = document.getElementById('product-container');
-            const scrollLeftBtn = document.getElementById('scroll-left-btn');
-            const scrollRightBtn = document.getElementById('scroll-right-btn');
+            const mainImage = document.getElementById('mainImage');
+            const thumbnails = document.querySelectorAll('.thumbnail');
 
-            if (productContainer && scrollLeftBtn && scrollRightBtn) {
-                // Tentukan jarak scroll (lebar satu kartu + margin)
-                const scrollAmount = 370; // 288px (w-72) + 24px (space-x-6)
-
-                scrollLeftBtn.addEventListener('click', () => {
-                    productContainer.scrollLeft -= scrollAmount;
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    mainImage.src = this.src;
+                    
+                    // Kemas kini gaya 'border' untuk thumbnail
+                    thumbnails.forEach(t => t.classList.remove('border-custom-blue', 'shadow-sm'));
+                    this.classList.add('border-custom-blue', 'shadow-sm');
                 });
-
-                scrollRightBtn.addEventListener('click', () => {
-                    productContainer.scrollLeft += scrollAmount;
-                });
-            }
+            });
         });
-    </script>
 
-    <script>
+        // Skrip untuk Pelungsur Produk Berkaitan
         document.addEventListener('DOMContentLoaded', function () {
-            // Temukan semua kartu produk yang memiliki slider
+            // Cari semua kad produk yang mempunyai pelungsur
             const productSliders = document.querySelectorAll('.product-card-slider');
 
-            // Lakukan loop untuk setiap kartu slider agar mereka bekerja secara independen
+            // Lakukan gelung untuk setiap pelungsur kad agar berfungsi secara bebas
             productSliders.forEach(slider => {
                 const images = slider.querySelectorAll('.image-slide');
                 const prevBtn = slider.querySelector('.prev-btn');
@@ -434,54 +430,65 @@
                 
                 let currentIndex = 0;
                 
-                // Buat titik navigasi berdasarkan jumlah gambar
-                images.forEach((_, index) => {
-                    const dot = document.createElement('span');
-                    dot.classList.add('block', 'w-2', 'h-2', 'bg-gray-400/70', 'rounded-full', 'cursor-pointer');
-                    dot.addEventListener('click', () => {
-                        updateCarousel(index);
+                // Cipta titik navigasi berdasarkan jumlah gambar
+                if (dotsContainer) {
+                    images.forEach((_, index) => {
+                        const dot = document.createElement('span');
+                        dot.classList.add('block', 'w-2', 'h-2', 'bg-gray-400/70', 'rounded-full', 'cursor-pointer');
+                        dot.addEventListener('click', () => {
+                            updateCarousel(index);
+                        });
+                        dotsContainer.appendChild(dot);
                     });
-                    dotsContainer.appendChild(dot);
-                });
-
-                const dots = dotsContainer.querySelectorAll('span');
+                }
+                
+                const dots = dotsContainer ? dotsContainer.querySelectorAll('span') : [];
 
                 function updateCarousel(newIndex) {
-                    // Sembunyikan gambar yang sedang aktif
+                    // Sembunyikan imej yang sedang aktif
                     images[currentIndex].classList.add('hidden');
-                    dots[currentIndex].classList.remove('w-6', 'bg-white');
-                    dots[currentIndex].classList.add('w-2', 'bg-gray-400/70');
+                    if(dots[currentIndex]) {
+                        dots[currentIndex].classList.remove('w-6', 'bg-white');
+                        dots[currentIndex].classList.add('w-2', 'bg-gray-400/70');
+                    }
 
-                    // Tentukan index baru
+                    // Tentukan indeks baharu
                     currentIndex = newIndex;
                     
-                    // Tampilkan gambar yang baru dan perbarui titiknya
+                    // Paparkan imej baharu dan kemas kini titiknya
                     images[currentIndex].classList.remove('hidden');
-                    dots[currentIndex].classList.add('w-6', 'bg-white');
-                    dots[currentIndex].classList.remove('w-2', 'bg-gray-400/70');
+                    if(dots[currentIndex]) {
+                        dots[currentIndex].classList.add('w-6', 'bg-white');
+                        dots[currentIndex].classList.remove('w-2', 'bg-gray-400/70');
+                    }
                 }
 
-                nextBtn.addEventListener('click', () => {
-                    let newIndex = currentIndex + 1;
-                    if (newIndex >= images.length) {
-                        newIndex = 0; // Kembali ke awal jika sudah di akhir
-                    }
-                    updateCarousel(newIndex);
-                });
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', () => {
+                        let newIndex = currentIndex + 1;
+                        if (newIndex >= images.length) {
+                            newIndex = 0; // Kembali ke awal jika sudah di penghujung
+                        }
+                        updateCarousel(newIndex);
+                    });
+                }
 
-                prevBtn.addEventListener('click', () => {
-                    let newIndex = currentIndex - 1;
-                    if (newIndex < 0) {
-                        newIndex = images.length - 1; // Pergi ke akhir jika sudah di awal
-                    }
-                    updateCarousel(newIndex);
-                });
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', () => {
+                        let newIndex = currentIndex - 1;
+                        if (newIndex < 0) {
+                            newIndex = images.length - 1; // Pergi ke penghujung jika sudah di permulaan
+                        }
+                        updateCarousel(newIndex);
+                    });
+                }
 
-                // Inisialisasi tampilan pertama kali
-                updateCarousel(0);
+                // Lakukan permulaan paparan kali pertama
+                if (images.length > 0) {
+                    updateCarousel(0);
+                }
             });
         });
     </script>
-
 </body>
 </html>
