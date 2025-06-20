@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Setting</title>
+    <title>Register</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -17,7 +17,7 @@
                     colors: {
                         'custom-teal-dark': '#063a49',
                         'custom-teal': '#1a4e69',
-                        'custom-blue': '#0866ff',
+                        'custom-pink': '#0866f',
                         'custom-blue-light': '#6bbaec' // Warna dari contoh sidebar kedua
                     }
                 }
@@ -38,6 +38,12 @@
         scrollbar-width: none;  /* Untuk Firefox */
     }
     </style>
+    <style>
+        /* Menambahkan style untuk transisi yang lebih mulus pada main content */
+        #mainContent {
+            transition: margin-left 0.3s ease-in-out;
+        }
+    </style>
 </head>
 <body class="font-sans">
 
@@ -47,7 +53,7 @@
         
             <div class="flex items-center justify-between p-4 border-b border-white/20">
                 <a href="#" class="flex items-center gap-2 font-semibold tracking-wider">
-                    <img src="../../../../assets/images/logo.png" alt="Logo" class="h-8 w-auto">
+                    <img src="../../../assets/images/logo.png" alt="Logo" class="h-8 w-auto">
                 </a>
 
                 <!-- <button id="closeSidebarBtn" class="hidden lg:block p-1">
@@ -74,10 +80,10 @@
                             <h6 class="font-semibold text-white">Rohaizad Raoof</h6>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </a>
-                        <div class="mt-3" id="loggedinMenu">
+                        <div class="hidden mt-3" id="loggedinMenu">
                             <ul class="space-y-1">
                                 <li>
-                                    <a href="./profile.html" class="block p-2 text-sm rounded-md bg-custom-teal">
+                                    <a href="./profile.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Profile Setting
                                     </a>
                                 </li>
@@ -138,13 +144,12 @@
                             <ul id="topupMenu" class="hidden mt-2 ml-5 space-y-1">
                                 <li>
                                     <a href="./topupwallet.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-
-                                        Kaedah TopUp
+                                        TopUp Wallet
                                     </a>
                                 </li>
                                 <li>
                                     <a href="./topuphistory.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        Kaedah TopUp History
+                                        TopUp Wallet History
                                     </a>
                                 </li>
                             </ul>
@@ -255,7 +260,7 @@
                                 </svg>
                             </a>
 
-                            <ul id="referralsMenu" class="hidden mt-2 ml-5 space-y-1">
+                            <ul id="referralsMenu" class=" mt-2 ml-5 space-y-1">
                                 <li>
                                     <a href="./sponsortree.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
                                         Pokok Penaja
@@ -282,23 +287,21 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./newregiatration.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
+                                    <a href="./newregiatration.html" class="block p-2 text-sm rounded-md bg-custom-teal">
                                         Pendaftaran Baru
                                     </a>
                                 </li>
                                 <li>
                                     <a href="./activateuser.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        Pengguna Aktif
+                                        Activate User
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        
                     </ul>
                 </nav>
             </div>
         </aside>
-        <div id="sidebarOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden lg:hidden"></div>
         <div id="mainContentWrapper" class="flex-1">
             <header class="sticky top-0 bg-white shadow-md z-30 p-3 flex items-center">
                 <button id="openSidebarBtn" class="p-2 rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-800">
@@ -309,131 +312,161 @@
                     </svg>
                 </button>
                 
-                <img src="../../../../assets/images/logo.png" alt="Logo" class="ml-4 h-10 w-auto">
-
+                <img src="../../../assets/images/logo.png" alt="Logo" class="ml-4 h-10 w-auto">
             </header>
 
-            <main class="p-6">
-                <div class="mb-6">
-                    <h1 class="md:text-3xl text-2xl font-bold text-gray-800">Profile Setting</h1>
-                    <p class="text-sm text-gray-500">Home - Profile Setting</p>
+            <main class="p-4 sm:p-6 lg:p-8">
+                <div class="mb-8">
+                    <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Register</h1>
+                    <p class="text-sm text-gray-500 mt-1">Home - Register</p>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <form>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <form action="#" method="POST">
+                        <div class="mb-6">
+                            <label for="reference_by" class="block text-sm font-medium text-gray-700">Reference By</label>
+                            <input type="text" id="reference_by" name="reference_by" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="admin">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">Nama Pertama*</label>
-                                <input type="text" id="first-name" placeholder="Username" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                                <label for="username" class="block text-sm font-medium text-gray-700">
+                                    Username
+                                    <span class="text-red-500">*</span>
+                                </label>
+                                <input type="text" name="username" id="username" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="Username">
                             </div>
+
                             <div>
-                                <label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">Nama Akhir*</label>
-                                <input type="text" id="last-name" placeholder="Nama Akhir" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                                <label for="email" class="block text-sm font-medium text-gray-700">
+                                    E-mail Adress
+                                    <span class="text-red-500">*</span>
+                                </label>
+                                <input type="email" name="email" id="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="Email Adress">
                             </div>
+
                             <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Alamat E-mel</label>
-                                <input type="email" id="email" placeholder="E-mail Address" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                            </div>
-                            <div>
-                                <label for="mobile-phone" class="block text-sm font-medium text-gray-700 mb-1">Telefon Bimbit</label>
-                                <input type="tel" id="mobile-phone" placeholder="Nombor Telefon anda" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                                <label for="country" class="block text-sm font-medium text-gray-700">Country</label>
+                                <select id="country" name="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-custom-teal focus:border-custom-teal sm:text-sm">
+                                    <option>Indonesian</option>
+                                    <option>Malaysian</option>
+                                </select>
                             </div>
                             
                             <div>
-                                <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
-                                <input type="password" id="password" placeholder="Masukan Password" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                            </div>
-                            <div>
-                                <label for="confirm-password" class="block text-sm font-medium text-gray-700 mb-1">Negeri</label>
-                                <input type="password" id="confirm-password" placeholder="Negeri" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                            </div>
-                            <div class="md:col-span-2">
-                                <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-0">
-                                    <div>
-                                        <label for="zip-code" class="block text-sm font-medium text-gray-700 mb-1">Zip Code</label>
-                                        <input type="text" id="zip-code" placeholder="Zip Code" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                                    </div>
-                                    <div>
-                                        <label for="city" class="block text-sm font-medium text-gray-700 mb-1">Kota</label>
-                                        <input type="text" id="city" placeholder="Kota" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                                    </div>
-                                    <div>
-                                        <label for="country" class="block text-sm font-medium text-gray-700 mb-1">Negara</label>
-                                        <input type="text" id="country" placeholder="Negara" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                                    </div>
+                                <label for="mobile_phone" class="block text-sm font-medium text-gray-700">Mobile Phone</label>
+                                <div class="mt-1 flex rounded-md shadow-sm">
+                                    <span id="country-code" class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">+62</span>
+                                    <input type="tel" name="mobile_phone" id="mobile_phone" class="flex-1 block w-full rounded-none rounded-r-md border-gray-300 py-2 px-3 focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="Your Phone Number">
                                 </div>
                             </div>
+                            
+                            <div>
+                                <label for="password" class="block text-sm font-medium text-gray-700">
+                                    Password
+                                    <span class="text-red-500">*</span>
+                                </label>
+                                <input type="password" name="password" id="password" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="Enter Password">
+                            </div>
+
+                            <div>
+                                <label for="confirm_password" class="block text-sm font-medium text-gray-700">
+                                    Confirm Password
+                                    <span class="text-red-500">*</span>
+                                </label>
+                                <input type="password" name="confirm_password" id="confirm_password" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-custom-teal focus:border-custom-teal sm:text-sm" placeholder="Confirm Password">
+                            </div>
                         </div>
-                        <div class="mt-8 pt-6 border-t border-gray-200">
-                            <button type="submit" class="w-full bg-custom-teal-dark text-white font-bold py-3 px-4 rounded-md hover:bg-custom-teal focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-teal">
-                                Sumbit
+                        
+                        <div class="mt-6 flex items-start">
+                            <div class="flex items-center h-5">
+                                <input id="agree" name="agree" type="checkbox" class="focus:ring-custom-teal h-4 w-4 text-custom-teal border-gray-300 rounded">
+                            </div>
+                            <div class="ml-3 text-sm">
+                                <label for="agree" class="font-medium text-gray-700">I agree with <a href="#" class="text-custom-pink hover:underline">Privacy Policy</a> . <a href="#" class="text-custom-pink hover:underline">Terms of Service</a></label>
+                            </div>
+                        </div>
+
+                        <div class="mt-2 text-center text-sm text-gray-600">
+                        Already Have an Account? <a href="#" class="font-medium text-custom-pink hover:underline">Sign In</a>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-custom-teal-dark hover:bg-custom-teal focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-teal">
+                                Create Account
                             </button>
                         </div>
                     </form>
                 </div>
             </main>
+
     </div>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
     // --- Referensi Elemen DOM ---
     const sidebar = document.getElementById('sidebar');
     const mainContent = document.querySelector('main');
     const universalToggleBtn = document.getElementById('openSidebarBtn');
+    const closeSidebarBtn = document.getElementById('closeSidebarBtn'); // Tambahkan referensi
     const closeSidebarMobileBtn = document.getElementById('closeSidebarMobileBtn');
     const sidebarOverlay = document.getElementById('sidebarOverlay');
-    const menuToggles = document.querySelectorAll('[data-menu-toggle]');
 
-    const MD_BREAKPOINT = 768; // Breakpoint untuk medium screen (Tailwind's md)
+    // Pastikan semua elemen penting ditemukan
+    if (!sidebar || !mainContent || !universalToggleBtn || !closeSidebarBtn) {
+        console.error("Elemen penting (sidebar, main, openSidebarBtn, atau closeSidebarBtn) tidak ditemukan. Periksa ID di HTML Anda.");
+        return;
+    }
+
+    const MD_BREAKPOINT = 768;
 
     // --- Definisi Fungsi ---
-
-    // Fungsi KHUSUS untuk BUKA/TUTUP sidebar di DESKTOP
     const toggleDesktopSidebar = () => {
-        if (!sidebar || !mainContent) return;
+        console.log("Mencoba toggle sidebar desktop...");
 
-        // Cek apakah sidebar sedang tertutup
-        const isCollapsed = sidebar.classList.contains('-translate-x-full');
+        // Mengecek status SAAT INI
+        const isCurrentlyCollapsed = sidebar.style.transform === 'translateX(-100%)';
+        console.log("Apakah saat ini tertutup? ", isCurrentlyCollapsed);
 
-        if (isCollapsed) {
-            // Jika tertutup -> BUKA
-            sidebar.classList.remove('-translate-x-full');
-            mainContent.classList.add('ml-64');
+        if (isCurrentlyCollapsed) {
+            console.log("Status: Tertutup. AKSI: MEMBUKA.");
+            // Buka sidebar
+            sidebar.style.transform = 'translateX(0)';
+            mainContent.classList.add('md:ml-64');
         } else {
-            // Jika terbuka -> TUTUP
-            sidebar.classList.add('-translate-x-full');
-            mainContent.classList.remove('ml-64');
+            console.log("Status: Terbuka. AKSI: MENUTUP.");
+            // Tutup sidebar
+            sidebar.style.transform = 'translateX(-100%)';
+            mainContent.classList.remove('md:ml-64');
         }
     };
 
-    // Fungsi KHUSUS untuk BUKA sidebar di MOBILE
     const openMobileSidebar = () => {
-        if (!sidebar || !sidebarOverlay) return;
-        sidebar.classList.remove('-translate-x-full');
-        sidebarOverlay.classList.remove('hidden');
+        sidebar.style.transform = 'translateX(0)';
+        if (sidebarOverlay) sidebarOverlay.classList.remove('hidden');
     };
 
-    // Fungsi KHUSUS untuk TUTUP sidebar di MOBILE
     const closeMobileSidebar = () => {
-        if (!sidebar || !sidebarOverlay) return;
-        sidebar.classList.add('-translate-x-full');
-        sidebarOverlay.classList.add('hidden');
+        sidebar.style.transform = 'translateX(-100%)';
+        if (sidebarOverlay) sidebarOverlay.classList.add('hidden');
     };
 
-    // --- Pemasangan Event Listener ---
+    // --- Event Listeners ---
+    universalToggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (window.innerWidth < MD_BREAKPOINT) {
+            openMobileSidebar();
+        } else {
+            toggleDesktopSidebar();
+        }
+    });
 
-    // Tombol hamburger universal di header
-    if (universalToggleBtn) {
-        universalToggleBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            // Cek lebar layar SAAT tombol diklik
-            if (window.innerWidth < MD_BREAKPOINT) {
-                openMobileSidebar(); // Di mobile, tombol ini hanya untuk membuka
-            } else {
-                toggleDesktopSidebar(); // Di desktop, tombol ini untuk buka/tutup
-            }
-        });
-    }
+    // Tambahkan event listener untuk closeSidebarBtn
+    closeSidebarBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (window.innerWidth >= MD_BREAKPOINT) {
+            toggleDesktopSidebar();
+        }
+    });
 
-    // Tombol 'X' di sidebar (hanya berfungsi di mobile)
     if (closeSidebarMobileBtn) {
         closeSidebarMobileBtn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -442,22 +475,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Overlay (hanya berfungsi di mobile)
     if (sidebarOverlay) {
         sidebarOverlay.addEventListener('click', closeMobileSidebar);
     }
 
     // --- Inisialisasi Saat Halaman Dimuat ---
     if (window.innerWidth >= MD_BREAKPOINT) {
-        sidebar.classList.remove('-translate-x-full');
+        sidebar.style.transform = 'translateX(0)'; // Desktop: Terbuka
         mainContent.classList.add('md:ml-64');
     } else {
-        sidebar.classList.add('-translate-x-full');
+        sidebar.style.transform = 'translateX(-100%)'; // Mobile: Tertutup
         mainContent.classList.remove('md:ml-64');
     }
-
-    // --- Logika Dropdown Menu (Tidak Berubah) ---
-    menuToggles.forEach(toggle => {
+    
+    // Dropdown menu (tidak berubah)
+    document.querySelectorAll('[data-menu-toggle]').forEach(toggle => {
         toggle.addEventListener('click', (e) => {
             e.preventDefault();
             const menuId = toggle.getAttribute('href').substring(1);
@@ -466,9 +498,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (menu) {
                 menu.classList.toggle('hidden');
-                if (icon) {
-                    icon.classList.toggle('rotate-180');
-                }
             }
         });
     });
