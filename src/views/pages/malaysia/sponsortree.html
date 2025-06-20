@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sponsor tree</title>
+    <title>Pohon Penaja</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -18,18 +18,18 @@
                         'custom-teal-dark': '#063a49',
                         'custom-teal': '#1a4e69',
                         'custom-pink': '#0866f',
-                        'custom-blue-light': '#6bbaec' // Warna dari contoh sidebar kedua
+                        'custom-blue-light': '#6bbaec' // Warna dari contoh bar sisi kedua
                     }
                 }
             }
         }
     </script>
     <style>
-    /* Menambahkan style untuk transisi yang lebih mulus pada main content */
-    #mainContentWrapper { /* Sebaiknya targetkan ID wrapper agar lebih konsisten */
+    /* Menambah gaya untuk peralihan yang lebih lancar pada kandungan utama */
+    #mainContentWrapper { /* Sebaiknya sasarkan ID pembalut agar lebih konsisten */
         transition: margin-left 0.3s ease-in-out;
     }
-    /* CSS untuk menyembunyikan scrollbar pada elemen */
+    /* CSS untuk menyembunyikan bar skrol pada elemen */
     .scrollbar-hide::-webkit-scrollbar {
         display: none; /* Untuk Chrome, Safari, dan Opera */
     }
@@ -39,7 +39,7 @@
     }
     </style>
     <style>
-        /* Menambahkan style untuk transisi yang lebih mulus pada main content */
+        /* Menambah gaya untuk peralihan yang lebih lancar pada kandungan utama */
         #mainContent {
             transition: margin-left 0.3s ease-in-out;
         }
@@ -56,10 +56,6 @@
                     <img src="../../../assets/images/logo.png" alt="Logo" class="h-8 w-auto">
                 </a>
 
-                <!-- <button id="closeSidebarBtn" class="hidden lg:block p-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                </button> -->
-
                 <button id="closeSidebarBtn" class="hidden lg:block p-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                     </button>
@@ -68,10 +64,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                     </a>
 
-                <!-- <a href="./dashboard.html" class="lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                </a> -->
-            </div>
+                </div>
 
             <div class="flex-grow overflow-y-auto scrollbar-hide">
                 <div class="p-4">
@@ -84,32 +77,32 @@
                             <ul class="space-y-1">
                                 <li>
                                     <a href="./profile.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        Profile Setting
+                                        Tetapan Profil
                                     </a>
                                 </li>
                                 <li>
                                     <a href="./order.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        Orders
+                                        Pesanan
                                     </a>
                                 </li>
                                 <li>
                                     <a href="./changepassword.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        Change Password
+                                        Tukar Kata Laluan
                                     </a>
                                 </li>
                                 <li>
                                     <a href="./supportticket.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        Support Ticket
+                                        Tiket Sokongan
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        2FA Security
+                                        Keselamatan 2FA
                                     </a>
                                 </li>
                                 <li>
                                     <a href="?action=logout" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        Logout
+                                        Log Keluar
                                     </a>
                                 </li>
                             </ul>
@@ -124,7 +117,7 @@
                         <li>
                             <a href="./dashboard.html" class="flex items-center gap-3 p-2 rounded-md hover:bg-custom-teal">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> 
-                                <span>Dashboard</span>
+                                <span>Papan Pemuka</span>
                             </a>
                         </li>
                         <li>
@@ -134,7 +127,7 @@
                                         <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
                                         <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
                                     </svg>
-                                    <span>Topup</span>
+                                    <span>Tambah Nilai</span>
                                 </div>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -144,12 +137,12 @@
                             <ul id="topupMenu" class="hidden mt-2 ml-5 space-y-1">
                                 <li>
                                     <a href="./topupwallet.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        TopUp Wallet
+                                        Tambah Nilai Dompet
                                     </a>
                                 </li>
                                 <li>
                                     <a href="./topuphistory.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        TopUp Wallet History
+                                        Sejarah Tambah Nilai Dompet
                                     </a>
                                 </li>
                             </ul>
@@ -162,7 +155,7 @@
                                         <path d="M2.25 6.75A2.25 2.25 0 014.5 4.5h15a.75.75 0 010 1.5h-15a.75.75 0 00-.75.75v10.5c0 .414.336.75.75.75h15a.75.75 0 010 1.5h-15a2.25 2.25 0 01-2.25-2.25V6.75z"/>
                                         <path d="M21 10.5a.75.75 0 00-.75-.75H15a1.5 1.5 0 000 3h5.25a.75.75 0 00.75-.75v-1.5z"/>
                                     </svg>
-                                    <span>Withdraw</span>
+                                    <span>Pengeluaran</span>
                                 </div>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -172,12 +165,12 @@
                             <ul id="withdrawMenu" class="hidden mt-2 ml-5 space-y-1">
                                 <li>
                                     <a href="./withdrawmoney.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        Withdraw Money
+                                        Keluarkan Wang
                                     </a>
                                 </li>
                                 <li>
                                     <a href="./withdrawhistory.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        Withdraw History
+                                        Sejarah Pengeluaran
                                     </a>
                                 </li>
                             </ul>
@@ -190,7 +183,7 @@
                                     <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
                                     <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
                                 </svg>
-                                <span>Products</span>
+                                <span>Produk</span>
                             </a>
                         </li>
 
@@ -199,7 +192,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M5 5a3 3 0 015.14-2.502A3.001 3.001 0 0115 5v2a2 2 0 011 1.732V15a2 2 0 01-2 2H6a2 2 0 01-2-2V8.732A2 2 0 015 7V5zm5-2.45a1 1 0 00-1.414.07L8.293 3.586A3 3 0 016 5V7h8V5a3 3 0 01-2.293-1.014L11.414 2.62a1 1 0 00-1.414-.07zM6 9a1 1 0 011-1h6a1 1 0 011 1v5a1 1 0 01-1 1H7a1 1 0 01-1-1V9z" clip-rule="evenodd" />
                                 </svg>
-                                <span>Rewards</span>
+                                <span>Ganjaran</span>
                             </a>
                         </li>
 
@@ -208,7 +201,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
                                 </svg>
-                                <span>Plan</span>
+                                <span>Pelan</span>
                             </a>
                         </li>
 
@@ -219,29 +212,29 @@
                                         <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
                                         <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
                                     </svg>
-                                    <span>Transactions</span>
+                                    <span>Transaksi</span>
                                 </div>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                             </a>
                             <ul id="transactionsMenu" class="hidden mt-2 ml-5 space-y-1">
                                 <li>
                                     <a href="./ewallet.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        EWallet
+                                        E-Dompet
                                     </a>
                                 </li>
                                 <li>
                                     <a href="./eshopping.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        EShopping
+                                        E-Beli-belah
                                     </a>
                                 </li>
                                 <li>
                                     <a href="./ewallettransfer.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        EWallet Transfer
+                                        Pindahan E-Dompet
                                     </a>
                                 </li>
                                 <li>
                                     <a href="./walletconversion.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        Wallet Conversion
+                                        Penukaran Dompet
                                     </a>
                                 </li>
                             </ul>
@@ -253,7 +246,7 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
                                     </svg>
-                                    <span>Referrals</span>
+                                    <span>Rujukan</span>
                                 </div>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -263,37 +256,37 @@
                             <ul id="referralsMenu" class=" mt-2 ml-5 space-y-1">
                                 <li>
                                     <a href="./sponsortree.html" class="block p-2 text-sm rounded-md bg-custom-teal">
-                                        Sponsor Tree
+                                        Pohon Penaja
                                     </a>
                                 </li>
                                 <li>
                                     <a href="./unileveltree.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        Unilevel Tree
+                                        Pohon Unilevel
                                     </a>
                                 </li>
                                 <li>
                                     <a href="./myreferralcommisions.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        Referrals Commissions
+                                        Komisen Rujukan
                                     </a>
                                 </li>
                                 <li>
                                     <a href="./levelcommissions.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        Level Commissions
+                                        Komisen Aras
                                     </a>
                                 </li>
                                 <li>
                                     <a href="./seedshare.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        Seed Share
+                                        Kongsi Benih
                                     </a>
                                 </li>
                                 <li>
                                     <a href="./newregiatration.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        New Registration
+                                        Pendaftaran Baru
                                     </a>
                                 </li>
                                 <li>
                                     <a href="./activateuser.html" class="block p-2 text-sm rounded-md hover:bg-custom-teal">
-                                        Activate User
+                                        Aktifkan Pengguna
                                     </a>
                                 </li>
                             </ul>
@@ -317,8 +310,8 @@
 
             <main class="p-6">
                 <div class="mb-8">
-                    <h1 class="text-3xl font-bold text-gray-800">My Sponsor Tree</h1>
-                    <p class="text-sm text-gray-500 mt-1">Home - My Sponsor Tree</p>
+                    <h1 class="text-3xl font-bold text-gray-800">Pohon Penaja Saya</h1>
+                    <p class="text-sm text-gray-500 mt-1">Laman Utama - Pohon Penaja Saya</p>
                 </div>
 
                 <div class="bg-custom-teal-dark tree-container text-white p-5 rounded-lg font-mono text-sm overflow-x-auto">
@@ -416,18 +409,18 @@
             </main>
     </div>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    // --- Referensi Elemen DOM ---
+document.addEventListener('DOMContentLoaded', function () {
+    // --- Rujukan Elemen DOM ---
     const sidebar = document.getElementById('sidebar');
     const mainContent = document.querySelector('main');
     const universalToggleBtn = document.getElementById('openSidebarBtn');
-    const closeSidebarBtn = document.getElementById('closeSidebarBtn'); // Tambahkan referensi
+    const closeSidebarBtn = document.getElementById('closeSidebarBtn'); // Tambah rujukan
     const closeSidebarMobileBtn = document.getElementById('closeSidebarMobileBtn');
     const sidebarOverlay = document.getElementById('sidebarOverlay');
 
-    // Pastikan semua elemen penting ditemukan
+    // Pastikan semua elemen penting ditemui
     if (!sidebar || !mainContent || !universalToggleBtn || !closeSidebarBtn) {
-        console.error("Elemen penting (sidebar, main, openSidebarBtn, atau closeSidebarBtn) tidak ditemukan. Periksa ID di HTML Anda.");
+        console.error("Elemen penting (sidebar, main, openSidebarBtn, atau closeSidebarBtn) tidak ditemui. Semak ID dalam HTML anda.");
         return;
     }
 
@@ -435,20 +428,20 @@
 
     // --- Definisi Fungsi ---
     const toggleDesktopSidebar = () => {
-        console.log("Mencoba toggle sidebar desktop...");
+        console.log("Mencuba untuk togol bar sisi desktop...");
 
-        // Mengecek status SAAT INI
+        // Menyemak status SEMASA
         const isCurrentlyCollapsed = sidebar.style.transform === 'translateX(-100%)';
-        console.log("Apakah saat ini tertutup? ", isCurrentlyCollapsed);
+        console.log("Adakah ia sedang ditutup? ", isCurrentlyCollapsed);
 
         if (isCurrentlyCollapsed) {
-            console.log("Status: Tertutup. AKSI: MEMBUKA.");
-            // Buka sidebar
+            console.log("Status: Ditutup. TINDAKAN: MEMBUKA.");
+            // Buka bar sisi
             sidebar.style.transform = 'translateX(0)';
             mainContent.classList.add('md:ml-64');
         } else {
-            console.log("Status: Terbuka. AKSI: MENUTUP.");
-            // Tutup sidebar
+            console.log("Status: Dibuka. TINDAKAN: MENUTUP.");
+            // Tutup bar sisi
             sidebar.style.transform = 'translateX(-100%)';
             mainContent.classList.remove('md:ml-64');
         }
@@ -464,7 +457,7 @@
         if (sidebarOverlay) sidebarOverlay.classList.add('hidden');
     };
 
-    // --- Event Listeners ---
+    // --- Pendengar Acara ---
     universalToggleBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         if (window.innerWidth < MD_BREAKPOINT) {
@@ -474,7 +467,7 @@
         }
     });
 
-    // Tambahkan event listener untuk closeSidebarBtn
+    // Tambah pendengar acara untuk closeSidebarBtn
     closeSidebarBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         if (window.innerWidth >= MD_BREAKPOINT) {
@@ -494,16 +487,16 @@
         sidebarOverlay.addEventListener('click', closeMobileSidebar);
     }
 
-    // --- Inisialisasi Saat Halaman Dimuat ---
+    // --- Permulaan Semasa Halaman Dimuatkan ---
     if (window.innerWidth >= MD_BREAKPOINT) {
-        sidebar.style.transform = 'translateX(0)'; // Desktop: Terbuka
+        sidebar.style.transform = 'translateX(0)'; // Desktop: Dibuka
         mainContent.classList.add('md:ml-64');
     } else {
-        sidebar.style.transform = 'translateX(-100%)'; // Mobile: Tertutup
+        sidebar.style.transform = 'translateX(-100%)'; // Mudah Alih: Ditutup
         mainContent.classList.remove('md:ml-64');
     }
     
-    // Dropdown menu (tidak berubah)
+    // Menu lungsur (tidak berubah)
     document.querySelectorAll('[data-menu-toggle]').forEach(toggle => {
         toggle.addEventListener('click', (e) => {
             e.preventDefault();
