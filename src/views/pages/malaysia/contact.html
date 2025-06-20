@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kongsi Niaga - B2B Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        // Konfigurasi untuk memadankan warna butang dan tema
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-teal-dark': '#063a49',
+                        'custom-teal': '#1a4e69',
+                        'custom-blue': '#0866ff', // Warna untuk butang di hero section
+                    }
+                }
+            }
+        }
+    </script>
+     <style>
+        /* CSS untuk menyembunyikan scrollbar pada kontainer produk */
+        .scrollbar-hide {
+            -ms-overflow-style: none; /* IE dan Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, dan Opera */
+        }
+     </style>
+</head>
+<body>
+
+    <header>
+        <nav class="bg-white shadow-lg relative sticky top-0 z-50">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    
+                    <div>
+                        <a href="#">
+                            <img class="h-10" src="../../../assets/images/logo.png" alt="Kongsi Niaga Logo">
+                        </a>
+                    </div>
+
+                    <div class="hidden md:flex items-center space-x-6">
+                        <div class="flex items-center space-x-6 align-center mx-auto text-base text-gray-700">
+                            <a href="../../../index.html" class="hover:text-custom-teal-dark">Home</a>
+                            <a href="./product.html" class="hover:text-custom-teal-dark">Product</a>
+                            <a href="./plan.html" class="hover:text-custom-teal-dark">Plan</a>
+                            <a href="./contact.html" class="hover:text-custom-teal-dark">Contact</a>
+                        </div>
+                        
+                        <div class="relative">
+                            <button id="language-toggle" class="flex items-center text-gray-700 hover:text-custom-teal-dark">
+                                <span>Malay</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div id="language-menu" class="hidden absolute right-0 mt-2 w-40 bg-white rounded-xl shadow-xl z-20">
+                                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-white">Malay</a>
+                                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-white">English</a>
+                            </div>
+                        </div>
+                        
+                        <div class="h-6 border-l border-gray-300"></div>
+
+                       <div class="flex items-center space-x-3">
+                         <a href="../../../login.html" class="
+                                 px-5 py-2 text-sm font-medium text-custom-teal-dark border border-custom-teal-dark rounded-xl 
+                                 hover:bg-custom-teal-dark hover:text-white
+                                 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out ">
+                                 Login
+                         </a>
+                         <a href="../../../register.html" class="
+                                 px-5 py-2 text-sm font-medium text-white bg-custom-teal-dark rounded-xl 
+                                 hover:bg-custom-teal-dark/90 
+                                 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out ">
+                                 Let's Start
+                         </a>
+                       </div>
+                    </div>
+
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-lg">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="../../../index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Home</a>
+                    <a href="./product.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Product</a>
+                    <a href="./plan.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Plan</a>
+                    <a href="./contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Contact</a>
+                    
+                    <div class="border-t border-gray-200 my-2"></div>
+                    
+                    <p class="px-3 pt-2 text-xs font-semibold text-gray-400 uppercase">Language</p>
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">Malay</a>
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-custom-teal-dark">English</a>
+                    
+                    <div class="border-t border-gray-200 my-2"></div>
+
+                    <div class="flex items-center px-3 py-2 space-x-3">
+                        <a href="../../../login.html" class="w-full text-center px-5 py-2 text-sm font-medium text-custom-teal-dark border border-custom-teal-dark rounded-xl hover:bg-custom-teal-dark hover:text-white
+                                 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out">
+                                 Login
+                        </a>
+                        <a href="../../../register.html" class="w-full text-center px-5 py-2 text-sm font-medium text-white bg-custom-teal-dark rounded-xl hover:bg-custom-teal-dark/90 
+                                 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out">
+                                 Let's Start
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="relative h-40 md:h-56  bg-cover bg-center text-white" 
+            style="background-image: url('../../../assets/images/background.jpg');">
+            
+            <div class="absolute inset-0 bg-[#063A4A]/70"></div>
+        </section>
+        <section class=" py-8 sm:py-12 lg:py-16 xl:py-24">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <!-- Header -->
+                <div class="mx-auto max-w-2xl text-center mb-8 sm:mb-12 lg:mb-16">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-custom-teal-dark">Contact Us</h2>
+                    <p class="mt-3 sm:mt-4 text-base sm:text-lg leading-6 sm:leading-8 text-gray-600 px-4 sm:px-0">
+                        Have a question or want to start a project? We're ready to help.
+                    </p>
+                </div>
+
+                <!-- Main Content Grid -->
+                <div class="mx-auto max-w-6xl">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 lg:items-start">
+                        
+                        <!-- Contact Information -->
+                        <div class="order-1 lg:order-1">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-10 h-full">
+                                <h3 class="text-xl sm:text-2xl font-bold text-custom-teal-dark mb-4 sm:mb-6">Get in Touch</h3>
+                                <p class="text-sm sm:text-base text-gray-600 mb-6 sm:mb-8 leading-relaxed">
+                                    Contact us using the details below or fill out the form. Our team will respond to you shortly.
+                                </p>
+                                
+                                <div class="space-y-8 sm:space-y-8">
+                                    <!-- Address -->
+                                    <div class="flex items-start gap-4">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div class="w-10 h-10 bg-custom-teal/10 rounded-full flex items-center justify-center">
+                                                <svg class="h-5 w-5 text-custom-teal" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-1">Address</h4>
+                                            <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
+                                                68, Jalan Bulan U5/172, Subang Bestari,<br>
+                                                40150 Shah Alam, Selangor.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Phone -->
+                                    <div class="flex items-start gap-4">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div class="w-10 h-10 bg-custom-teal/10 rounded-full flex items-center justify-center">
+                                                <svg class="h-5 w-5 text-custom-teal" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.211-.992-.58-1.353l-2.73-2.73a1.125 1.125 0 00-1.59 0l-1.15 1.15a1.125 1.125 0 01-1.59 0l-4.34-4.34a1.125 1.125 0 010-1.59l1.15-1.15a1.125 1.125 0 000-1.59l-2.73-2.73a1.125 1.125 0 00-1.353-.58H4.5A2.25 2.25 0 002.25 6.75z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-1">Phone</h4>
+                                            <a href="tel:+60104409848" class="text-sm sm:text-base text-gray-700 hover:text-custom-teal transition-colors duration-200">
+                                                +60 10 440 9848
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="flex items-start gap-4">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div class="w-10 h-10 bg-custom-teal/10 rounded-full flex items-center justify-center">
+                                                <svg class="h-5 w-5 text-custom-teal" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-1">Email</h4>
+                                            <a href="mailto:info@kongsinia.com" class="text-sm sm:text-base text-gray-700 hover:text-custom-teal transition-colors duration-200">
+                                                info@kongsinia.com
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Form -->
+                        <div class="order-2 lg:order-2">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-10">
+                                <h3 class="text-xl sm:text-2xl font-bold text-custom-teal-dark mb-6">Send us a Message</h3>
+                                
+                                <form action="#" method="POST" class="space-y-6">
+                                    <!-- Name and Email Row -->
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                                        <div>
+                                            <label for="name" class="block text-sm font-semibold leading-6 text-gray-900 mb-2">
+                                                Name <span class="text-custom-blue">*</span>
+                                            </label>
+                                            <input 
+                                                type="text" 
+                                                name="name" 
+                                                id="name" 
+                                                autocomplete="name" 
+                                                placeholder="Enter your name" 
+                                                required
+                                                class="block w-full rounded-lg border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-teal transition-all duration-200 text-sm sm:text-base"
+                                            >
+                                        </div>
+                                        <div>
+                                            <label for="email" class="block text-sm font-semibold leading-6 text-gray-900 mb-2">
+                                                Email <span class="text-custom-blue">*</span>
+                                            </label>
+                                            <input 
+                                                type="email" 
+                                                name="email" 
+                                                id="email" 
+                                                autocomplete="email" 
+                                                placeholder="Enter your email" 
+                                                required
+                                                class="block w-full rounded-lg border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-teal transition-all duration-200 text-sm sm:text-base"
+                                            >
+                                        </div>
+                                    </div>
+
+                                    <!-- Subject -->
+                                    <div>
+                                        <label for="subject" class="block text-sm font-semibold leading-6 text-gray-900 mb-2">
+                                            Subject <span class="text-custom-blue">*</span>
+                                        </label>
+                                        <input 
+                                            type="text" 
+                                            name="subject" 
+                                            id="subject" 
+                                            placeholder="What is this about?" 
+                                            required
+                                            class="block w-full rounded-lg border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-teal transition-all duration-200 text-sm sm:text-base"
+                                        >
+                                    </div>
+
+                                    <!-- Message -->
+                                    <div>
+                                        <label for="message" class="block text-sm font-semibold leading-6 text-gray-900 mb-2">
+                                            Message
+                                        </label>
+                                        <textarea 
+                                            name="message" 
+                                            id="message" 
+                                            rows="5" 
+                                            placeholder="Enter your message here..."
+                                            class="block w-full rounded-lg border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-teal transition-all duration-200 resize-none text-sm sm:text-base"
+                                        ></textarea>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <div class="pt-4">
+                                        <button 
+                                            type="submit" 
+                                            class="group relative w-full rounded-xl bg-gradient-to-r from-custom-blue to-blue-500 px-6 py-4 text-center font-semibold text-white shadow-lg hover:shadow-xl hover:from-custom-blue/90 hover:to-blue-500/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-custom-blue transition-all duration-300 ease-in-out transform hover:-translate-y-0.5"
+                                        >
+                                            <span class="flex items-center justify-center gap-2">
+                                                Send Message
+                                                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200">
+      <div class="container mx-auto px-6  md:px-20 py-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+              
+              <div class="col-span-1 md:col-span-2 lg:col-span-2">
+                  <a href="#">
+                      <img class="h-10 mb-6" src="../../../assets/images/logo.png" alt="Kongsi Niaga Logo">
+                  </a>
+                  <p class="text-custom-teal max-w-sm">
+                      B2B platform connecting businesses for efficient and trustworthy transactions.
+                  </p>
+                  <div class="flex space-x-4 mt-6">
+                      <a href="#" class="text-custom-teal hover:text-custom-blue transition-colors">
+                          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                          </svg>
+                      </a>
+                      <a href="#" class="text-custom-teal hover:text-custom-blue transition-colors">
+                          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                          </svg>
+                      </a>
+                      <a href="#" class="text-custom-teal hover:text-custom-blue transition-colors">
+                          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                          </svg>
+                      </a>
+                  </div>
+              </div>
+
+              <div>
+                  <h3 class="text-lg font-semibold text-custom-teal-dark mb-4">Menu</h3>
+                  <ul class="space-y-3">
+                      <li><a href="../../../index.html" class="text-custom-teal hover:text-custom-blue transition-colors">Home</a></li>
+                      <li><a href="./product.html" class="text-custom-teal hover:text-custom-blue transition-colors">Product</a></li>
+                      <li><a href="./plan.html" class="text-custom-teal hover:text-custom-blue transition-colors">Plan</a></li>
+                      <li><a href="./contact.html" class="text-custom-teal hover:text-custom-blue transition-colors">Contact</a></li>
+                  </ul>
+              </div>
+
+              <div>
+                  <h3 class="text-lg font-semibold text-custom-teal-dark mb-4">Information</h3>
+                  <ul class="space-y-3">
+                      <li><a href="#" class="text-custom-teal hover:text-custom-blue transition-colors">Terms of Services</a></li>
+                      <li><a href="#" class="text-custom-teal hover:text-custom-blue transition-colors">Privacy Policy</a></li>
+                  </ul>
+              </div>
+              
+          </div>
+
+          <div class="border-t border-gray-300 pt-6">
+              <p class=" text-custom-teal">
+                  ©2025 All Right Reserved By <a href="./index.html" class="text-custom-blue hover:underline">KongsiNiaga</a>
+              </p>
+          </div>
+      </div>
+  </footer>
+
+    <script>
+        // --- Skrip untuk fungsi Dropdown Bahasa dan Menu Mudah Alih ---
+        const langToggle = document.getElementById('language-toggle');
+        const langMenu = document.getElementById('language-menu');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // 1. Logik untuk Dropdown Bahasa
+        if (langToggle) {
+            langToggle.addEventListener('click', (event) => {
+                event.stopPropagation(); 
+                langMenu.classList.toggle('hidden');
+            });
+        }
+
+        // 2. Logik untuk Menu Mudah Alih
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        
+        // Tutup dropdown jika pengguna klik di luar kawasan menu
+        window.addEventListener('click', () => {
+            if (langMenu && !langMenu.classList.contains('hidden')) {
+                langMenu.classList.add('hidden');
+            }
+        });
+        
+        // --- Skrip Baru untuk Scroll Section 3 ---
+        document.addEventListener('DOMContentLoaded', function() {
+            const productContainer = document.getElementById('product-container');
+            const scrollLeftBtn = document.getElementById('scroll-left-btn');
+            const scrollRightBtn = document.getElementById('scroll-right-btn');
+
+            if (productContainer && scrollLeftBtn && scrollRightBtn) {
+                // Tentukan jarak scroll (lebar satu kartu + margin)
+                const scrollAmount = 370; // 288px (w-72) + 24px (space-x-6)
+
+                scrollLeftBtn.addEventListener('click', () => {
+                    productContainer.scrollLeft -= scrollAmount;
+                });
+
+                scrollRightBtn.addEventListener('click', () => {
+                    productContainer.scrollLeft += scrollAmount;
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Temukan semua kartu produk yang memiliki slider
+            const productSliders = document.querySelectorAll('.product-card-slider');
+
+            // Lakukan loop untuk setiap kartu slider agar mereka bekerja secara independen
+            productSliders.forEach(slider => {
+                const images = slider.querySelectorAll('.image-slide');
+                const prevBtn = slider.querySelector('.prev-btn');
+                const nextBtn = slider.querySelector('.next-btn');
+                const dotsContainer = slider.querySelector('.dots-container');
+                
+                let currentIndex = 0;
+                
+                // Buat titik navigasi berdasarkan jumlah gambar
+                images.forEach((_, index) => {
+                    const dot = document.createElement('span');
+                    dot.classList.add('block', 'w-2', 'h-2', 'bg-gray-400/70', 'rounded-full', 'cursor-pointer');
+                    dot.addEventListener('click', () => {
+                        updateCarousel(index);
+                    });
+                    dotsContainer.appendChild(dot);
+                });
+
+                const dots = dotsContainer.querySelectorAll('span');
+
+                function updateCarousel(newIndex) {
+                    // Sembunyikan gambar yang sedang aktif
+                    images[currentIndex].classList.add('hidden');
+                    dots[currentIndex].classList.remove('w-6', 'bg-white');
+                    dots[currentIndex].classList.add('w-2', 'bg-gray-400/70');
+
+                    // Tentukan index baru
+                    currentIndex = newIndex;
+                    
+                    // Tampilkan gambar yang baru dan perbarui titiknya
+                    images[currentIndex].classList.remove('hidden');
+                    dots[currentIndex].classList.add('w-6', 'bg-white');
+                    dots[currentIndex].classList.remove('w-2', 'bg-gray-400/70');
+                }
+
+                nextBtn.addEventListener('click', () => {
+                    let newIndex = currentIndex + 1;
+                    if (newIndex >= images.length) {
+                        newIndex = 0; // Kembali ke awal jika sudah di akhir
+                    }
+                    updateCarousel(newIndex);
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    let newIndex = currentIndex - 1;
+                    if (newIndex < 0) {
+                        newIndex = images.length - 1; // Pergi ke akhir jika sudah di awal
+                    }
+                    updateCarousel(newIndex);
+                });
+
+                // Inisialisasi tampilan pertama kali
+                updateCarousel(0);
+            });
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 800, // Durasi animasi
+        once: true,    // Animasi hanya berjalan sekali
+    });
+    </script>
+
+</body>
+</html>
