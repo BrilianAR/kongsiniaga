@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <script>
-        // Konfigurasi Tailwind CSS
         tailwind.config = {
             theme: {
                 extend: {
@@ -18,28 +17,25 @@
                         'custom-teal-dark': '#063a49',
                         'custom-teal': '#1a4e69',
                         'custom-blue': '#0866ff',
-                        'custom-blue-light': '#6bbaec' // Warna dari contoh sidebar kedua
+                        'custom-blue-light': '#6bbaec'
                     }
                 }
             }
         }
     </script>
     <style>
-    /* Menambahkan style untuk transisi yang lebih mulus pada main content */
-    #mainContentWrapper { /* Sebaiknya targetkan ID wrapper agar lebih konsisten */
+    #mainContentWrapper {
         transition: margin-left 0.3s ease-in-out;
     }
-    /* CSS untuk menyembunyikan scrollbar pada elemen */
     .scrollbar-hide::-webkit-scrollbar {
-        display: none; /* Untuk Chrome, Safari, dan Opera */
+        display: none;
     }
     .scrollbar-hide {
-        -ms-overflow-style: none;  /* Untuk IE dan Edge */
-        scrollbar-width: none;  /* Untuk Firefox */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
     </style>
     <style>
-        /* Menambahkan style untuk transisi yang lebih mulus pada main content */
         #mainContent {
             transition: margin-left 0.3s ease-in-out;
         }
@@ -56,14 +52,18 @@
                     <img src="../../../assets/images/logo.png" alt="Logo" class="h-8 w-auto">
                 </a>
 
-                <!-- <button id="closeSidebarBtn" class="hidden lg:block p-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                </button> -->
-
                 <button id="closeSidebarBtn" class="hidden lg:block p-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                    </button>
+                </button>
 
+                <a href="#" id="closeSidebarMobileBtn" class="lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </a>
+            </div>
+
+            <div class="flex-grow overflow-y-auto scrollbar-hide">
+                <div class="p-4">
+                    <div></div>
                 <a href="#" id="closeSidebarMobileBtn" class="lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                     </a>
@@ -327,27 +327,27 @@
 
                 <div class="flex flex-col md:flex-row gap-8">
                     <div class="w-full md:w-2/3">
-                        <h2 class="md:text-2xl text-xl font-semibold text-gray-700">Selamat Datang, Rizadd.</h2>
+                        <h2 class="md:text-2xl text-xl font-semibold text-gray-700">Welcome, Rizadd.</h2>
                         <div class="mt-4 p-4 border-l-4 border-red-500 bg-red-50 text-gray-800 rounded-r-lg">
-                            <p class="text-sm font-medium text-gray-500">NOTIS:</p>
+                            <p class="text-sm font-medium text-gray-500">NOTE:</p>
                                 <div class="mt-2">
                                     <h3 class="text-2xl font-bold italic text-gray-800">
-                                        🚀 Kongsi Niaga 2.0 Akan Dilancarkan Tidak Lama Lagi!
+                                        🚀 Kongsi Niaga 2.0 Will Be Launched Soon!
                                     </h3>
                                     
                                     <p class="mt-3 text-gray-700">
-                                        Kami sedang menjalani penjenamaan semula dengan wajah baharu, produk yang lebih menarik dan pakej yang lebih kompetitif!
+                                        We are undergoing a rebranding with a new look, more attractive products and more competitive packages!
                                     </p>
                                     
                                     <div class="mt-4 space-y-2 text-gray-800">
                                         <p>
-                                            ✨ Nantikan pelancaran rasmi <span class="font-bold">Kongsi Niaga 2.0</span> - platform niaga yang lebih dinamik dan berdaya saing.
+                                            ✨ Stay tuned for the official launch of <span class="font-bold">Kongsi Niaga 2.0</span> – a more dynamic and competitive business platform.
                                         </p>
                                         <p>
-                                            Bersedia untuk peluang baharu, nilai lebih tinggi &amp; ganjaran yang lebih lumayan.
+                                            Get ready for new opportunities, greater value &amp; even more rewarding benefits.
                                         </p>
                                         <p class="mt-4 italic">
-                                            🚩 Stay tuned - kami akan umumkan tarikh pelancaran tidak lama lagi!
+                                            🚩 Stay tuned – we will announce the launch date soon!
                                         </p>
                                     </div>
                                 </div>
@@ -355,7 +355,7 @@
                     </div>
 
                     <div class="w-full md:w-1/3 bg-white p-6 rounded-lg shadow">
-                        <h3 class="font-semibold text-gray-800 border-b pb-2">Sila hubungi Ketua Negeri anda</h3>
+                        <h3 class="font-semibold text-gray-800 border-b pb-2">Please contact your State Leader</h3>
 
                         <div class="grid grid-cols-1 sm:grid-cols-[auto,1fr] gap-x-4 gap-y-3 mt-4 text-sm text-gray-600">
                             <span class="font-bold">SELANGOR</span>

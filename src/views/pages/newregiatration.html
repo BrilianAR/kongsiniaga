@@ -351,7 +351,7 @@
                                     <option>Malaysian</option>
                                 </select>
                             </div>
-                            
+
                             <div>
                                 <label for="mobile_phone" class="block text-sm font-medium text-gray-700">Mobile Phone</label>
                                 <div class="mt-1 flex rounded-md shadow-sm">
@@ -410,10 +410,28 @@
     const closeSidebarMobileBtn = document.getElementById('closeSidebarMobileBtn');
     const sidebarOverlay = document.getElementById('sidebarOverlay');
 
+    const countrySelect = document.getElementById('country');
+    const countryCodeSpan = document.getElementById('country-code');
+
     // Pastikan semua elemen penting ditemukan
     if (!sidebar || !mainContent || !universalToggleBtn || !closeSidebarBtn) {
         console.error("Elemen penting (sidebar, main, openSidebarBtn, atau closeSidebarBtn) tidak ditemukan. Periksa ID di HTML Anda.");
         return;
+    }
+
+    if (countrySelect && countryCodeSpan) {
+        countrySelect.addEventListener('change', function () {
+            const selectedCountry = this.value; // 'this' merujuk pada countrySelect
+            switch (selectedCountry) {
+                case 'Malaysian':
+                    countryCodeSpan.textContent = '+60';
+                    break;
+                case 'Indonesian':
+                default:
+                    countryCodeSpan.textContent = '+62';
+                    break;
+            }
+        });
     }
 
     const MD_BREAKPOINT = 768;
